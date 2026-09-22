@@ -1,369 +1,333 @@
-# KADMONTECH FACTORY — POINT B PACK v0.2
+# KADMONTECH FACTORY — POINT B PACK v0.3
 
-Estado: PILOTO INTERNO / NO BUILD
+Estado: PILOTO INTERNO / POINT B CANON EN DEFINICIÓN
 Método: POINT B FIRST
 Regla: NO BUILD WITHOUT APPROVED POINT B
 
 ## 01. PRODUCT INTENT
-KadmonTech Factory será el sistema operativo interno de KadmonTech para conectar ventas, onboarding, diseño del Point B, construcción, infraestructura, QA, entrega, economics y reutilización de IP.
-
-No será un CRM genérico ni un gestor de tareas genérico. La interfaz seguirá la forma real en la que KadmonTech vende y entrega proyectos de IA/software.
-
-Usuarios V1: Dirección, Comercial, Tecnología/Producto.
-
-## 02. PROBLEMA
-Hoy el contexto operativo vive repartido entre chats, WhatsApp, documentos, CRM, GitHub, Vercel, Supabase, propuestas, memoria humana y herramientas separadas. La Factory debe contestar inmediatamente:
-- qué clientes/proyectos están activos;
-- en qué etapa está cada uno;
-- qué está bloqueando el avance;
+KadmonTech Factory será el sistema operativo interno mínimo de KadmonTech para responder cinco preguntas operativas sin depender de memoria, chats o herramientas dispersas:
+- qué proyectos existen;
+- en qué estado está cada uno;
+- qué está bloqueado;
 - qué depende del cliente;
-- qué se construyó;
-- qué está en producción;
-- cuánto costó y cuánto margen dejó;
-- qué parte del trabajo se puede reutilizar.
+- cuál es el próximo paso y quién lo tiene.
 
-## 03. POINT B EXPERIENCE
-Un miembro del equipo entra a factory.kadmontech.com y, sin buscar en chats, entiende la operación completa.
+La V1 NO intentará ser un ERP, CRM completo, gestor de tareas universal ni suite empresarial total. Debe ser simple, intuitiva y extensible por módulos cuando aparezca una necesidad real.
 
-El Command Center muestra:
-- clientes activos;
-- proyectos en build;
-- proyectos esperando al cliente;
-- QA pendiente;
-- alertas y bloqueos;
-- próximos hitos;
-- actividad comercial relevante;
-- snapshot económico.
+Usuarios V1: Dirección, Tecnología/Producto y equipo operativo autorizado.
 
-Al abrir un proyecto ve una ficha viva con:
-- valor contractual y cobrado;
-- etapa actual;
-- health;
-- bloqueo principal;
-- dependencia del cliente;
-- timeline de hitos;
-- Point B aprobado;
-- build e infraestructura;
-- datos faltantes;
-- QA;
-- economics;
-- delivery;
-- reusable IP extraída del proyecto.
+## 02. DESIGN PRINCIPLE
+La complejidad debe vivir detrás de la interfaz, no delante del usuario.
 
-## 04. VISUAL NORTH STAR
-Dirección visual provisional:
-- premium B2B operating system;
-- sobrio, tecnológico, alta densidad controlada;
-- oscuro por defecto con superficies profundas y contraste fuerte;
-- acentos cian/azul KadmonTech restringidos a estados y acciones;
-- tipografía limpia, jerarquía fuerte y números grandes sólo donde aportan;
-- cero estética gamer/cyberpunk decorativa;
-- cero tarjetas flotantes sin función;
-- sensación de centro de mando, no de SaaS genérico;
-- información operativa primero, ornamento después.
+Reglas:
+- mostrar sólo información accionable;
+- evitar métricas que todavía no se usan para decidir;
+- evitar secciones creadas sólo porque podrían servir en el futuro;
+- permitir que cada proyecto tenga contexto suficiente sin convertir la home en una enciclopedia;
+- crecer por capas y por necesidad real;
+- preferir estados objetivos a porcentajes subjetivos;
+- toda pantalla debe ayudar a contestar “¿qué necesita atención ahora?”.
 
-Referencias conceptuales, no para copiar: Linear, Stripe Dashboard, Vercel, modern command centers y product operations tools.
+## 03. CANON VISUAL 01 — COMMAND CENTER
+La primera visualización canónica fue aprobada como dirección general.
 
-## 05. INFORMATION ARCHITECTURE
+Lo que se conserva del concepto:
+- sidebar persistente;
+- header con búsqueda;
+- saludo/contexto operacional;
+- KPIs mínimos;
+- sección Hoy;
+- bloqueos/dependencias;
+- proyectos activos;
+- actividad reciente;
+- estética enterprise sobria, clara, premium y tecnológica.
+
+Recorte para V1:
+Sidebar:
+- Command Center
+- Clients
+- Projects
+- Operations
+- Settings
+
+Se ocultan de V1 inicial:
+- Sales
+- Point B Library como módulo global
+- Product Library como módulo global
+
+Ambos conceptos siguen existiendo dentro del modelo, pero no ocupan navegación principal hasta que su uso cotidiano lo justifique.
+
+KPIs V1:
+- Clientes activos
+- Proyectos en curso
+- Esperando cliente
+- Listos para QA
+- Bloqueados (opcional si aporta señal real)
+
+Fuera de V1 home:
+- MRR
+- métricas aspiracionales o no integradas
+- banner decorativo de marca
+- frase motivacional
+- widgets sin acción clara
+
+## 04. CORE OPERATIONAL STATES
+Estados operativos permitidos en V1:
+- ON_TRACK
+- WAITING_CLIENT
+- BLOCKED
+- READY_FOR_QA
+- DONE
+
+Estados de trabajo interno cuando aplique:
+- NOT_STARTED
+- IN_PROGRESS
+- IN_REVIEW
+
+Evitar sinónimos innecesarios.
+
+Cada proyecto debe tener siempre:
+- Owner
+- Current Stage
+- Health / Operational State
+- Next Action
+- Client Dependency cuando exista
+- Last Update
+
+## 05. INFORMATION ARCHITECTURE — V1
 
 ### 00 AUTH
 - Login
 
 ### 01 COMMAND CENTER
+- KPI strip
 - Today
+- Blockers / Client Dependencies
 - Active Projects
-- Alerts
-- Client Dependencies
-- Delivery Queue
-- Business Snapshot
+- Recent Activity
 
-### 02 SALES
-- Pipeline
-- Leads
-- Demos
-- Proposals
-- Closed Won
-
-### 03 CLIENTS
+### 02 CLIENTS
 - Client List
-- Client Profile
+- Client Detail básico
 - Contacts
-- Commercial History
-- Active/Archived Projects
+- Active Projects
 
-### 04 PROJECTS
-Cada proyecto contiene:
+### 03 PROJECTS
+- Project List
+- Project Detail
+
+Project Detail tabs V1:
 - Overview
 - Point B
 - Build
 - Client Data
 - Infrastructure
-- QA
-- Economics
-- Delivery
 - Knowledge
 
-### 05 POINT B LIBRARY
-- Draft
-- Visualizing
-- Awaiting Approval
-- Approved
-- Historical
+### 04 OPERATIONS
+- Global Blockers
+- Waiting Client
+- Ready for QA
+- Deployment / Infrastructure incidents when relevant
 
-### 06 PRODUCT LIBRARY
-- Components
-- Modules
-- Templates
-- Product Cores
-- Reusable Prompts/SOPs
-
-### 07 OPERATIONS
-- Blockers
-- Client Dependencies
-- Deployments
-- Incidents
-- Waiting States
-
-### 08 SETTINGS
+### 05 SETTINGS
 - Team
 - Roles
-- Integrations
-- Organization
+- Organization basics
 
-## 06. KEY SCREEN 01 — COMMAND CENTER
-Objetivo: entender en menos de 30 segundos qué necesita atención hoy.
+## 06. PROJECT DETAIL — V1 PURPOSE
+Project Detail debe ser la segunda pantalla canónica porque concentra la operación real de cada cliente/proyecto.
 
-Desktop layout:
-- left permanent navigation;
-- top command/search bar;
-- compact status strip;
-- main column: Today + Active Projects;
-- secondary column: Blockers + Client Dependencies + Deployments;
-- lower area: Business Snapshot and Delivery Pipeline.
+Debe permitir responder en segundos:
+- ¿qué estamos construyendo?
+- ¿en qué etapa está?
+- ¿qué falta?
+- ¿qué lo bloquea?
+- ¿qué sigue?
+- ¿qué depende del cliente?
+- ¿quién es responsable?
+- ¿cuál es el Point B aprobado?
+- ¿qué infraestructura está conectada?
 
-Example real content:
-KUPER — Waiting client — WhatsApp data pending
-KadmonTech — Point B Pilot — Visual direction in progress
-Prospecting — Batch — Contact progress
-
-No fake KPI percentages.
-
-## 07. KEY SCREEN 02 — PROJECT OVERVIEW
-Header:
-- Client / Project
+Header mínimo:
+- Project / Client
 - Stage
-- Health
-- Contract Value
-- Collected
+- Operational State
 - Owner
+- Next Action
 
-Primary block:
-CURRENT STAGE
-BLOCKED BY
-NEXT MILESTONE
-CLIENT DEPENDENCY
+Primary summary:
+- Current Stage
+- Blocked By
+- Client Dependency
+- Next Milestone
 
-Timeline:
-Closed Won → Payment → Onboarding → Point B → Build → QA → Production → Delivery → Operation → Case Study
+Timeline simple:
+Closed Won → Onboarding → Point B → Build → QA → Production → Delivery
 
-Tabs:
-Overview | Point B | Build | Client Data | Infrastructure | QA | Economics | Delivery | Knowledge
+## 07. POINT B WORKSPACE — V1
+Point B vive dentro del proyecto; no necesita una librería global en la primera versión.
 
-## 08. KEY SCREEN 03 — POINT B WORKSPACE
-Top status:
-DRAFT / VISUALIZING / REVIEW / APPROVED / SUPERSEDED
+Estados:
+- DRAFT
+- VISUALIZING
+- REVIEW
+- APPROVED
+- SUPERSEDED
 
-Sections:
+Contenido:
 - Product Intent
 - Point B Experience
 - Visual North Star
 - Screen Map
-- Golden Flow
 - Key Visuals
+- Golden Flow
 - V1 Scope
-- V1.1
-- V2
 - Not Now
 - Build Handoff
 
-The Key Visuals section is dominant. Text supports the visual destination; it does not replace it.
+Key Visuals es el núcleo. El texto documenta; no reemplaza la visualización.
 
-Approval must record approver and timestamp before Build becomes READY.
+## 08. BUILD — V1
+No usar barras subjetivas de progreso.
 
-## 09. KEY SCREEN 04 — BUILD & INFRASTRUCTURE
-Build should not use subjective progress bars.
+Dominios posibles:
+- Frontend
+- Backend
+- Database
+- Auth
+- Integrations
+- AI
+- QA
+- Deployment
 
-Show milestone states instead:
-- Not started
-- In progress
-- Blocked
-- Ready for QA
-- Done
+Cada dominio usa sólo estados objetivos:
+- NOT_STARTED
+- IN_PROGRESS
+- BLOCKED
+- READY_FOR_QA
+- DONE
 
-Domains:
-Frontend
-Backend
-Database
-Auth
-Integrations
-AI
-QA
-Deployment
+## 09. CLIENT DATA — V1
+Checklist agrupado para eliminar la pregunta “¿qué nos faltaba pedirle al cliente?”.
 
-Infrastructure cards:
-GitHub repo
-Vercel project/deployment
-Supabase project
-Domain
-Meta/WhatsApp
-AI provider
-Health / last checked
+Grupos posibles:
+- Brand assets
+- Business information
+- Content
+- Credentials / Access
+- Operational rules
+- Products / Services
+- Approvals
 
-## 10. KEY SCREEN 05 — CLIENT DATA
-Purpose: eliminate the question “¿qué nos faltaba pedirle al cliente?”.
+Cada item puede tener:
+- status
+- owner
+- requested_at
+- received_at
+- source/link
+- notes
 
-Grouped checklist:
-Brand assets
-Business information
-Content
-Access credentials
-Operational rules
-Product/service catalogue
-Legal/approval items
+## 10. INFRASTRUCTURE — V1
+Mostrar sólo integraciones reales del proyecto.
 
-Each item:
-status, owner, requested date, received date, source/link, notes.
+Ejemplos:
+- GitHub
+- Vercel
+- Supabase
+- Domain
+- WhatsApp / Meta
+- AI provider
 
-## 11. KEY SCREEN 06 — ECONOMICS
-Show:
-Contract value
-Collected
-Outstanding
-Direct infra cost
-Variable usage
-Human build hours
-Support hours
-External services
-Estimated contribution margin
-Recurring revenue / monthly care when applicable
+Cada integración muestra:
+- status
+- identifier/link
+- environment
+- last check when available
 
-Must distinguish:
-SHARED PLATFORM COST
-CLIENT INCREMENTAL COST
-HUMAN COST
+## 11. KNOWLEDGE — V1
+Knowledge dentro del proyecto contiene sólo conocimiento operativo necesario para entregar y mantener el cliente.
 
-## 12. KEY SCREEN 07 — PRODUCT LIBRARY / REUSABLE IP
-Every completed project is decomposed into:
-CUSTOM_FOR_CLIENT
-REUSABLE_COMPONENT
-REUSABLE_MODULE
-TEMPLATE
-PRODUCT_CORE
-SOP/PROMPT
+Puede incluir:
+- FAQs
+- business rules
+- service catalogue
+- approved copy
+- technical notes
+- handoff notes
 
-Example from KUPER:
-Auth Core → reusable component
-Knowledge Manager → reusable module
-WhatsApp secure webhook → reusable module
-Reception Digital Core → potential product core
-KUPER identity/content → custom
+No construir todavía un knowledge management system global complejo.
 
-## 13. GOLDEN FLOW
-Closed Won
-→ Project created
-→ Onboarding complete
-→ Point B drafted
-→ Key Visuals generated
-→ Point B approved
-→ Build Handoff
-→ Build milestones
-→ QA
-→ Production
-→ Delivery
-→ Operation
-→ Economics review
-→ Case study eligibility
-→ Reusable IP extraction
+## 12. SCOPE FREEZE — V1 CANON
+### IN V1
+- Login
+- Command Center
+- Clients List
+- Client Detail básico
+- Projects List
+- Project Detail
+- Point B dentro de Project Detail
+- Build milestones
+- Client Data
+- Infrastructure
+- Knowledge
+- Global Operations básico
+- Settings mínimo
+- Owner + Next Action + Client Dependency
+- estados operativos estandarizados
 
-## 14. STATES
-Every operational screen must have:
-Empty
-Populated
-Loading
-Blocked
-Error
-Waiting Client
-Ready for Review
-Approved/Done
+### V1.1 — ONLY AFTER V1 USE
+- Notifications
+- Search global real
+- Activity log más profundo
+- QA workspace dedicado
+- Economics
+- exports
+- deployment health automation
+- reusable IP extraction asistida
 
-## 15. MOBILE POINT B
-Mobile is not a compressed desktop dashboard.
-Primary mobile jobs:
-- see Today;
-- inspect blockers;
-- approve/reject Point B;
-- check project status;
-- mark client data received;
-- view critical deployment state.
-
-Deep editing can remain desktop-first in V1.
-
-## 16. SCOPE FREEZE — PROVISIONAL
-### V1
-Command Center
-Clients
-Projects
-Point B Workspace
-Client Data
-Build milestones
-Infrastructure links/status
-Economics baseline
-Reusable IP classification
-Team roles
-
-### V1.1
-Sales sync
-Deployment health automation
-Notifications
-Activity log
-Exports
-
-### V2
-Client portal
-Automated proposal generation
-Automated billing
-AI project copilot
-Cross-project analytics
-Advanced product library search
+### V2 — WHEN JUSTIFIED
+- Sales module / CRM sync
+- Point B Library global
+- Product Library global
+- Client portal
+- automated proposal generation
+- automated billing
+- AI project copilot
+- cross-project analytics
 
 ### NOT NOW
-Full project management replacement
-Chat replacement
-Accounting ERP
-Generic CRM for external companies
-Complex HR management
+- full project management replacement
+- chat replacement
+- accounting ERP
+- generic external CRM
+- complex HR
+- vanity analytics
+- decorative widgets without operational value
 
-## 17. DEFINITION OF DONE FOR POINT B
-Point B is ready only when:
-1. the product can be explained as a finished experience;
-2. screen architecture is coherent;
-3. at least 5 master visuals exist;
-4. desktop + mobile direction is visible;
-5. empty and populated states are represented;
-6. V1 and Not Now are explicit;
-7. user approves visual direction;
-8. only then is Build Handoff generated.
-
-## 18. FIRST VISUAL BATTERY
-Before any code, generate independently:
-1. Command Center — Desktop
-2. Project Overview — Desktop
+## 13. FIRST VISUAL BATTERY — UPDATED
+Canonical sequence:
+1. Command Center — Desktop ✅ first direction approved
+2. Project Detail — KUPER — Desktop ← NEXT
 3. Point B Workspace — Desktop
 4. Build & Infrastructure — Desktop
-5. Product Library / Reusable IP — Desktop
-6. Command Center — Mobile
+5. Command Center — Mobile
 
-These visuals must look like one coherent product family.
+Product Library visual moves out of the immediate V1 battery because the module is not part of initial navigation.
 
-## 19. PRODUCTION GATE
-No public-facing visual change is deployed from a Point B experiment. Experiments live in a branch/preview until explicit approval.
+## 14. VISUAL QA GATE
+A screen becomes canonical only when the user explicitly approves its visual direction.
+
+No code implementation should precede visual approval for major product surfaces.
+
+No public-facing visual experiment is deployed to production. Experiments stay in branch/preview until explicit approval.
+
+## 15. BUILD GATE
+Build may start when:
+1. Command Center direction is approved;
+2. Project Detail direction is approved;
+3. Point B Workspace direction is approved;
+4. V1 Scope Freeze is accepted;
+5. navigation and state model are stable enough to avoid rework.
+
+POINT B FIRST does not require designing every future screen before code. It requires enough canonical surfaces to make the destination unambiguous.
