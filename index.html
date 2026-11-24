@@ -775,125 +775,138 @@
             .method-step p { max-width: 100%; }
         }
 
-        /* ===== SECCIÓN TESTIMONIOS ===== */
+        /* Testimonios V2 — KadmonTech */
         .testimonials-section {
-            background-color: white;
-            padding: 6rem 0;
             position: relative;
+            padding: clamp(76px, 7vw, 112px) 0;
+            color: #edf6fc;
             overflow: hidden;
+            background:
+                radial-gradient(ellipse 50% 65% at 100% 0%, rgba(0, 175, 204, 0.10), transparent 80%),
+                radial-gradient(ellipse 40% 60% at 0% 100%, rgba(8, 99, 158, 0.10), transparent 80%),
+                #03101e;
+            border-top: 1px solid rgba(69, 163, 196, 0.16);
         }
-
-        .testimonials-section::before {
-            content: '';
-            position: absolute;
-            top: -100px;
-            right: -100px;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(0, 176, 255, 0.08) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
+        .testimonials-section > .container {
+            max-width: 1390px;
+            padding-left: clamp(20px, 4.5vw, 70px);
+            padding-right: clamp(20px, 4.5vw, 70px);
         }
-
-        .testimonials-section::after {
-            content: '';
-            position: absolute;
-            bottom: -80px;
-            left: -80px;
-            width: 250px;
-            height: 250px;
-            background: radial-gradient(circle, rgba(26, 35, 126, 0.06) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
+        .kt-review-heading {
+            max-width: 790px;
+            margin: 0 auto 44px;
+            text-align: center;
         }
-
-        .testimonials-grid {
+        .kt-review-heading h2 {
+            margin: 0 0 14px;
+            color: #fff;
+            font-size: clamp(2rem, 3.3vw, 2.75rem);
+            font-weight: 800;
+            letter-spacing: -0.035em;
+            line-height: 1.17;
+        }
+        .kt-review-heading p {
+            margin: 0;
+            color: #b7ccd9;
+            font-size: clamp(1rem, 1.2vw, 1.12rem);
+            line-height: 1.55;
+        }
+        .kt-review-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            align-items: stretch;
         }
-
-        .testimonial-card {
-            background: linear-gradient(145deg, #ffffff 0%, #f8faff 100%);
-            border-radius: var(--border-radius);
-            padding: 2.5rem 2rem 2rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-            transition: var(--transition);
+        .kt-review-card {
             position: relative;
-            border: 1px solid rgba(0, 176, 255, 0.1);
             display: flex;
             flex-direction: column;
+            min-width: 0;
+            margin: 0;
+            padding: 30px 30px 26px;
+            border-radius: 20px;
+            color: #edf6fc;
+            background: linear-gradient(145deg, #08263a 0%, #05192b 100%);
+            border: 1px solid rgba(69, 162, 195, 0.39);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16), inset 0 1px 0 rgba(225, 251, 255, 0.035);
         }
-
-        .testimonial-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-            border-color: rgba(0, 176, 255, 0.25);
-        }
-
-        .testimonial-quote-icon {
+        .kt-review-card::before {
+            content: "";
             position: absolute;
-            top: 20px;
-            right: 24px;
-            font-size: 3rem;
-            color: rgba(0, 176, 255, 0.12);
-            font-family: Georgia, serif;
-            line-height: 1;
+            left: 30px;
+            right: 30px;
+            top: 0;
+            height: 1px;
+            background: linear-gradient(90deg, #02dce9, transparent);
+            opacity: 0.8;
             pointer-events: none;
         }
-
-        .testimonial-stars {
-            color: #f5a623;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
+        .kt-review-mark {
+            display: block;
+            height: 35px;
+            margin-bottom: 16px;
+            color: #06e1e7;
+            font: 700 3.5rem/1 Georgia, serif;
+            user-select: none;
         }
-
-        .testimonial-text {
-            font-size: 1.05rem;
+        .kt-review-card blockquote {
+            flex: 1;
+            margin: 0 0 32px;
+            padding: 0;
+            border: 0;
+        }
+        .kt-review-card blockquote p {
+            margin: 0;
+            color: #e0ebf3;
+            font-size: 1rem;
+            font-weight: 400;
+            font-style: normal;
             line-height: 1.7;
-            color: #444;
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-            font-style: italic;
         }
-
-        .testimonial-author {
+        .kt-review-author {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            padding-top: 1.2rem;
-            border-top: 1px solid rgba(0, 0, 0, 0.06);
+            gap: 13px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(136, 188, 211, 0.18);
         }
-
-        .testimonial-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 1.1rem;
-            flex-shrink: 0;
+        .kt-review-avatar {
+            display: grid;
+            place-items: center;
+            flex: 0 0 42px;
+            width: 42px;
+            height: 42px;
+            background: rgba(4, 67, 87, 0.65);
+            border: 1px solid rgba(5, 222, 232, 0.38);
+            border-radius: 12px;
+            color: #34e7ed;
+            font-size: 0.81rem;
+            font-weight: 800;
+            line-height: 1;
         }
-
-        .testimonial-info h4 {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 0.15rem;
+        .kt-review-details { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+        .kt-review-name {
+            color: #f9fcff;
+            font-size: 0.99rem;
+            font-weight: 750;
+            line-height: 1.25;
         }
-
-        .testimonial-info p {
+        .kt-review-role {
+            color: #94afc2;
             font-size: 0.85rem;
-            color: var(--gray);
-            margin-bottom: 0;
+            line-height: 1.35;
         }
-        
+        @media (max-width: 1040px) {
+            .kt-review-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 700px) {
+            .testimonials-section { padding: 70px 0 78px; }
+            .kt-review-heading { margin-bottom: 30px; }
+            .kt-review-grid { grid-template-columns: 1fr; gap: 16px; }
+            .kt-review-card { padding: 27px 25px 23px; }
+            .kt-review-card blockquote { margin-bottom: 24px; }
+        }
+
         /* Sección de Clientes */
         .clients-section {
             background-color: #f8faff;
@@ -1183,7 +1196,6 @@
         @media (max-width: 992px) {
             h1 { font-size: 2.8rem; }
             h2 { font-size: 2.2rem; }
-            .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
             .client-logo-slide { padding: 0 2rem; }
             .client-logo-slide img { height: 50px; max-width: 150px; }
         }
@@ -1206,7 +1218,6 @@
             .nav-links.active { left: 0; }
             .nav-links li { margin: 0 0 1.5rem 0; }
             .nav-links a { color: var(--dark); text-shadow: none; }
-            .testimonials-grid { grid-template-columns: 1fr; }
             .client-logo-slide { padding: 0 1.5rem; }
             .client-logo-slide img { height: 45px; max-width: 130px; }
             .clients-slider-container::before,
@@ -1413,98 +1424,86 @@
         </div>
     </section>
 
-    <!-- ===== TESTIMONIOS ===== -->
-    <section id="testimonios" class="testimonials-section">
+    <!-- Testimonios V2 -->
+    <section id="testimonios" class="testimonials-section" aria-labelledby="kt-reviews-title">
         <div class="container">
-            <div class="section-title">
-                <h2>Lo que Dicen Nuestros Clientes</h2>
-                <p>Empresas que ya transformaron sus procesos con KadmonTech</p>
+            <div class="kt-review-heading">
+                <h2 id="kt-reviews-title">Lo que dicen nuestros clientes</h2>
+                <p>Experiencias compartidas sobre el trabajo y las soluciones de KadmonTech.</p>
             </div>
-
-            <div class="testimonials-grid">
-                <!-- Testimonio 1 -->
-                <div class="testimonial-card">
-                    <span class="testimonial-quote-icon">"</span>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">Implementamos el chatbot de KadmonTech y la atención al cliente mejoró radicalmente. Respondemos consultas 24/7 sin sumar personal, y las ventas por WhatsApp aumentaron un 40% en el primer mes.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">MR</div>
-                        <div class="testimonial-info">
-                            <h4>Martín R.</h4>
-                            <p>Director Comercial — Sector Inmobiliario</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonio 2 -->
-                <div class="testimonial-card">
-                    <span class="testimonial-quote-icon">"</span>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">La automatización de presupuestos nos ahorró más de 15 horas semanales de trabajo administrativo. Ahora generamos cotizaciones en segundos y el proceso de facturación es automático. Una locura la eficiencia que ganamos.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">LC</div>
-                        <div class="testimonial-info">
-                            <h4>Laura C.</h4>
-                            <p>Gerente de Operaciones — Distribuidora Industrial</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonio 3 -->
-                <div class="testimonial-card">
-                    <span class="testimonial-quote-icon">"</span>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">Ezequiel e Ivan entienden el negocio, no solo la tecnología. Nos armaron un panel de gestión que hoy es el centro de todas nuestras decisiones. Recomiendo a KadmonTech sin dudarlo.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">DF</div>
-                        <div class="testimonial-info">
-                            <h4>Diego F.</h4>
-                            <p>CEO — Empresa de Logística</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonio 4 -->
-                <div class="testimonial-card">
-                    <span class="testimonial-quote-icon">"</span>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">Contratamos la gestión de stock inteligente y dejamos de perder plata por exceso de inventario. La predicción de demanda con IA nos permitió reducir el stock muerto en un 60%.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">SV</div>
-                        <div class="testimonial-info">
-                            <h4>Lucas Gimenez.</h4>
-                            <p>Dueño — Comercio Mayorista</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonio 5 -->
-                <div class="testimonial-card">
-                    <span class="testimonial-quote-icon">"</span>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">Nos desarrollaron el sitio web con IA y los resultados de SEO fueron inmediatos. En tres meses triplicamos las visitas orgánicas y el sitio prácticamente se gestiona solo. Impresionante.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">JP</div>
-                        <div class="testimonial-info">
-                            <h4>Juan Pablo M.</h4>
-                            <p>Fundador — Startup Fintech</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonio 6 -->
-                <div class="testimonial-card">
-                    <span class="testimonial-quote-icon">"</span>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">La conciliación bancaria que tardaba días ahora se resuelve en minutos. El equipo contable puede enfocarse en lo que realmente importa. KadmonTech transformó nuestra operación financiera.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">AC</div>
-                        <div class="testimonial-info">
-                            <h4>Dario Kaleka</h4>
-                            <p>Contador — Estudio Contable</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="kt-review-grid">
+                <!-- Testimonio 1 — contenido existente -->
+                <figure class="kt-review-card">
+                    <span class="kt-review-mark" aria-hidden="true">“</span>
+                    <blockquote><p>Implementamos el chatbot de KadmonTech y la atención al cliente mejoró radicalmente. Respondemos consultas 24/7 sin sumar personal, y las ventas por WhatsApp aumentaron un 40% en el primer mes.</p></blockquote>
+                    <figcaption class="kt-review-author">
+                        <span class="kt-review-avatar" aria-hidden="true">MR</span>
+                        <span class="kt-review-details">
+                            <span class="kt-review-name">Martín R.</span>
+                            <span class="kt-review-role">Director Comercial — Sector Inmobiliario</span>
+                        </span>
+                    </figcaption>
+                </figure>
+                <!-- Testimonio 2 — contenido existente -->
+                <figure class="kt-review-card">
+                    <span class="kt-review-mark" aria-hidden="true">“</span>
+                    <blockquote><p>La automatización de presupuestos nos ahorró más de 15 horas semanales de trabajo administrativo. Ahora generamos cotizaciones en segundos y el proceso de facturación es automático. Una locura la eficiencia que ganamos.</p></blockquote>
+                    <figcaption class="kt-review-author">
+                        <span class="kt-review-avatar" aria-hidden="true">LC</span>
+                        <span class="kt-review-details">
+                            <span class="kt-review-name">Laura C.</span>
+                            <span class="kt-review-role">Gerente de Operaciones — Distribuidora Industrial</span>
+                        </span>
+                    </figcaption>
+                </figure>
+                <!-- Testimonio 3 — contenido existente -->
+                <figure class="kt-review-card">
+                    <span class="kt-review-mark" aria-hidden="true">“</span>
+                    <blockquote><p>Ezequiel e Ivan entienden el negocio, no solo la tecnología. Nos armaron un panel de gestión que hoy es el centro de todas nuestras decisiones. Recomiendo a KadmonTech sin dudarlo.</p></blockquote>
+                    <figcaption class="kt-review-author">
+                        <span class="kt-review-avatar" aria-hidden="true">DF</span>
+                        <span class="kt-review-details">
+                            <span class="kt-review-name">Diego F.</span>
+                            <span class="kt-review-role">CEO — Empresa de Logística</span>
+                        </span>
+                    </figcaption>
+                </figure>
+                <!-- Testimonio 4 — contenido existente -->
+                <figure class="kt-review-card">
+                    <span class="kt-review-mark" aria-hidden="true">“</span>
+                    <blockquote><p>Contratamos la gestión de stock inteligente y dejamos de perder plata por exceso de inventario. La predicción de demanda con IA nos permitió reducir el stock muerto en un 60%.</p></blockquote>
+                    <figcaption class="kt-review-author">
+                        <span class="kt-review-avatar" aria-hidden="true">SV</span>
+                        <span class="kt-review-details">
+                            <span class="kt-review-name">Lucas Gimenez.</span>
+                            <span class="kt-review-role">Dueño — Comercio Mayorista</span>
+                        </span>
+                    </figcaption>
+                </figure>
+                <!-- Testimonio 5 — contenido existente -->
+                <figure class="kt-review-card">
+                    <span class="kt-review-mark" aria-hidden="true">“</span>
+                    <blockquote><p>Nos desarrollaron el sitio web con IA y los resultados de SEO fueron inmediatos. En tres meses triplicamos las visitas orgánicas y el sitio prácticamente se gestiona solo. Impresionante.</p></blockquote>
+                    <figcaption class="kt-review-author">
+                        <span class="kt-review-avatar" aria-hidden="true">JP</span>
+                        <span class="kt-review-details">
+                            <span class="kt-review-name">Juan Pablo M.</span>
+                            <span class="kt-review-role">Fundador — Startup Fintech</span>
+                        </span>
+                    </figcaption>
+                </figure>
+                <!-- Testimonio 6 — contenido existente -->
+                <figure class="kt-review-card">
+                    <span class="kt-review-mark" aria-hidden="true">“</span>
+                    <blockquote><p>La conciliación bancaria que tardaba días ahora se resuelve en minutos. El equipo contable puede enfocarse en lo que realmente importa. KadmonTech transformó nuestra operación financiera.</p></blockquote>
+                    <figcaption class="kt-review-author">
+                        <span class="kt-review-avatar" aria-hidden="true">AC</span>
+                        <span class="kt-review-details">
+                            <span class="kt-review-name">Dario Kaleka</span>
+                            <span class="kt-review-role">Contador — Estudio Contable</span>
+                        </span>
+                    </figcaption>
+                </figure>
             </div>
         </div>
     </section>
@@ -1715,7 +1714,7 @@
             });
         }, observerOptions);
         
-        document.querySelectorAll('.service-card, .testimonial-card').forEach(el => {
+        document.querySelectorAll('.service-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
@@ -1759,7 +1758,7 @@
         
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
-                document.querySelectorAll('.service-card, .testimonial-card').forEach((el, index) => {
+                document.querySelectorAll('.service-card').forEach((el, index) => {
                     setTimeout(() => {
                         el.style.opacity = '1';
                         el.style.transform = 'translateY(0)';
