@@ -907,76 +907,141 @@
             .kt-review-card blockquote { margin-bottom: 24px; }
         }
 
-        /* Sección de Clientes */
+        /* Clientes — misma identidad navy/cian que el resto de KadmonTech */
         .clients-section {
-            background-color: #f8faff;
-            padding: 5rem 0;
+            background:
+                radial-gradient(ellipse 60% 80% at 50% 100%, rgba(0, 123, 166, 0.10), transparent 75%),
+                linear-gradient(180deg, #03101e 0%, #031423 100%);
+            color: #fff;
+            padding: 78px 0 82px;
             overflow: hidden;
+            border-top: 1px solid rgba(47, 165, 198, 0.16);
+            border-bottom: 1px solid rgba(47, 165, 198, 0.16);
         }
-        
+
+        .clients-section .section-title {
+            margin-bottom: 36px;
+        }
+
+        .clients-section .section-title h2 {
+            color: #fff;
+            font-size: clamp(2rem, 3.3vw, 2.75rem);
+            font-weight: 800;
+            line-height: 1.16;
+            letter-spacing: -0.035em;
+        }
+
+        .clients-section .section-title h2::after {
+            background-color: #05dce9;
+        }
+
+        .clients-section .section-title p {
+            color: #d0e0ec;
+            font-size: clamp(1rem, 1.2vw, 1.12rem);
+            line-height: 1.55;
+        }
+
         .clients-slider-container {
             position: relative;
             width: 100%;
             overflow: hidden;
-            margin-top: 3rem;
+            margin-top: 26px;
         }
-        
+
         .clients-slider-track {
             display: flex;
-            animation: slide 30s linear infinite;
+            align-items: center;
             width: max-content;
+            animation: slide 30s linear infinite;
         }
-        
+
         .client-logo-slide {
-            flex: 0 0 auto;
-            padding: 0 3rem;
             display: flex;
+            flex: 0 0 192px;
             align-items: center;
             justify-content: center;
+            height: 90px;
+            margin: 0 12px;
+            padding: 14px 18px;
+            border: 1px solid rgba(132, 201, 230, 0.27);
+            border-radius: 15px;
+            background: rgba(234, 246, 255, 0.94);
+            box-shadow: 0 7px 23px rgba(0, 0, 0, 0.16);
         }
-        
+
         .client-logo-slide img {
-            height: 60px;
+            display: block;
             width: auto;
-            max-width: 180px;
-            opacity: 0.9;
-            transition: var(--transition);
-        }
-        
-        .client-logo-slide:hover img {
+            height: auto;
+            max-height: 60px;
+            max-width: 100%;
+            object-fit: contain;
             opacity: 1;
+            transition: transform 0.25s ease;
         }
-        
+
+        .client-logo-slide:hover img {
+            transform: scale(1.05);
+        }
+
         @keyframes slide {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
-        
+
         .clients-slider-container::before,
         .clients-slider-container::after {
             content: '';
             position: absolute;
             top: 0;
-            width: 150px;
+            width: 130px;
             height: 100%;
             z-index: 2;
             pointer-events: none;
         }
-        
+
         .clients-slider-container::before {
             left: 0;
-            background: linear-gradient(to right, #f8faff, transparent);
+            background: linear-gradient(to right, #031423, transparent);
         }
-        
+
         .clients-slider-container::after {
             right: 0;
-            background: linear-gradient(to left, #f8faff, transparent);
+            background: linear-gradient(to left, #031423, transparent);
         }
-        
+
+        @media (max-width: 768px) {
+            .clients-section { padding: 64px 0 72px; }
+            .client-logo-slide {
+                flex-basis: 160px;
+                height: 76px;
+                margin: 0 9px;
+                padding: 12px 14px;
+            }
+            .client-logo-slide img { max-height: 49px; }
+            .clients-slider-container::before,
+            .clients-slider-container::after { width: 75px; }
+        }
+
+        @media (max-width: 576px) {
+            .clients-section { padding: 56px 0 64px; }
+            .clients-section .section-title { margin-bottom: 28px; }
+            .client-logo-slide {
+                flex-basis: 143px;
+                height: 70px;
+                margin: 0 7px;
+                padding: 10px 12px;
+            }
+            .client-logo-slide img { max-height: 43px; }
+            .clients-slider-container::before,
+            .clients-slider-container::after { width: 36px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .clients-slider-track { animation: none; }
+            .clients-slider-container { overflow-x: auto; }
+        }
+
         /* KadmonTech CTA final / Point B */
         .contact-section {
             position: relative;
@@ -1218,8 +1283,6 @@
         @media (max-width: 992px) {
             h1 { font-size: 2.8rem; }
             h2 { font-size: 2.2rem; }
-            .client-logo-slide { padding: 0 2rem; }
-            .client-logo-slide img { height: 50px; max-width: 150px; }
         }
         
         @media (max-width: 768px) {
@@ -1240,10 +1303,6 @@
             .nav-links.active { left: 0; }
             .nav-links li { margin: 0 0 1.5rem 0; }
             .nav-links a { color: var(--dark); text-shadow: none; }
-            .client-logo-slide { padding: 0 1.5rem; }
-            .client-logo-slide img { height: 45px; max-width: 130px; }
-            .clients-slider-container::before,
-            .clients-slider-container::after { width: 80px; }
             .whatsapp-button { width: 60px; height: 60px; }
             .whatsapp-button i { font-size: 30px; }
         }
@@ -1252,10 +1311,6 @@
             h1 { font-size: 2.3rem; }
             h2 { font-size: 1.9rem; }
             section { padding: 4rem 0; }
-            .client-logo-slide { padding: 0 1rem; }
-            .client-logo-slide img { height: 40px; max-width: 110px; }
-            .clients-slider-container::before,
-            .clients-slider-container::after { width: 60px; }
         }
     </style>
 </head>
