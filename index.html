@@ -507,65 +507,6 @@
             .hero-feature:nth-child(3) { flex-basis: 100%; }
         }
 
-        /* Introducción */
-        .intro-section {
-            padding: 5rem 0;
-            background-color: white;
-            position: relative;
-        }
-        
-        .intro-container {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        
-        .intro-content {
-            padding-right: 2rem;
-        }
-        
-        .intro-title {
-            color: var(--dark);
-            font-size: 2.8rem;
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-        }
-        
-        .intro-subtitle {
-            color: var(--secondary);
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-            line-height: 1.4;
-        }
-        
-        .intro-description {
-            font-size: 1.15rem;
-            line-height: 1.7;
-            color: #333;
-            margin-bottom: 2rem;
-        }
-        
-        .intro-image-container {
-            position: relative;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .intro-image {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            display: block;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-        }
-        
         /* Sección de Servicios */
         .services-section {
             background-color: #f8faff;
@@ -1147,9 +1088,6 @@
             h2 { font-size: 2.2rem; }
             .services-grid { grid-template-columns: repeat(2, 1fr); }
             .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
-            .intro-container { grid-template-columns: 1fr; gap: 3rem; }
-            .intro-content { padding-right: 0; }
-            .intro-title { font-size: 2.4rem; }
             .demo-title { font-size: 2.4rem; }
             .client-logo-slide { padding: 0 2rem; }
             .client-logo-slide img { height: 50px; max-width: 150px; }
@@ -1224,7 +1162,6 @@
             
             <ul class="nav-links" id="navLinks">
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#introduccion">Nosotros</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#demo">Demo Gratis</a></li>
                 <li><a href="#testimonios">Testimonios</a></li>
@@ -1269,36 +1206,6 @@
                         <i class="fas fa-chart-line" aria-hidden="true"></i>
                         <span>Resultados<br>medibles</span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Introducción / Sobre Nosotros -->
-    <section id="introduccion" class="intro-section">
-        <div class="container">
-            <div class="intro-container">
-                <div class="intro-content">
-                    <h2 class="intro-title">Construimos el futuro con IA para tu negocio</h2>
-                    <p class="intro-subtitle">Expertos en tecnología y agentes de inteligencia artificial, trabajando en equipo para transformar empresas de todos los tamaños.</p>
-                    
-                    <div class="intro-description">
-                        <p>En KadmonTech, la visión humana y la precisión de la IA se unen. Somos <strong>Ezequiel Genovesi</strong> e <strong>Ivan Cristini</strong>, y junto a nuestro equipo de agentes de inteligencia artificial especializados en desarrollo y automatización, creamos soluciones que optimizan cada aspecto de tu operación, sin importar el tamaño de tu empresa.</p>
-                        <p>No solo desarrollamos tecnología; creamos un ecosistema inteligente donde la experiencia de nuestros fundadores y la capacidad analítica de nuestros agentes de IA se potencian para resolver los desafíos más complejos, desde pequeñas empresas hasta grandes corporaciones.</p>
-                    </div>
-                </div>
-                
-                <div class="intro-image-container">
-                    <div style="position: relative; text-align: center;">
-                        <img src="https://i.imgur.com/UDygb3B.jpeg" 
-                             alt="Ezequiel Genovesi e Ivan Cristini ofreciendo una charla sobre inteligencia artificial" 
-                             class="intro-image"
-                             style="border: 4px solid white; box-shadow: 0 20px 35px -8px rgba(26,35,126,0.25); width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
-                        
-                    </div>
-                    <p style="text-align: center; margin-top: 30px; font-size: 0.9rem; color: var(--gray);">
-                        Ezequiel e Ivan compartiendo su visión sobre el impacto de la IA en la actualidad.
-                    </p>
                 </div>
             </div>
         </div>
