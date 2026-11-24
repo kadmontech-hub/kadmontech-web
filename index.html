@@ -508,7 +508,7 @@
         }
 
 
-        /* KADMONTECH — Nuestras Soluciones / Point B */
+        /* KADMONTECH — Soluciones Point B / tarjetas informativas uniformes */
         .services-section {
             position: relative;
             overflow: hidden;
@@ -518,7 +518,6 @@
                 radial-gradient(ellipse 35% 40% at 100% 92%, rgba(0, 115, 155, 0.12), transparent 80%),
                 #020d1a;
             color: #ecf5fc;
-            isolation: isolate;
         }
 
         .services-section > .container {
@@ -531,15 +530,6 @@
             max-width: 860px;
             margin: 0 auto 43px;
             text-align: center;
-        }
-
-        .kt-services-eyebrow {
-            margin: 0 0 12px;
-            color: #04e4ef;
-            font-size: 0.82rem;
-            font-weight: 800;
-            line-height: 1.4;
-            letter-spacing: 0.20em;
         }
 
         .kt-services-heading h2 {
@@ -562,6 +552,7 @@
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 20px;
+            align-items: stretch;
         }
 
         .kt-service-card {
@@ -569,54 +560,27 @@
             display: flex;
             flex-direction: column;
             min-width: 0;
-            min-height: 216px;
-            padding: 27px 28px 26px;
+            min-height: 235px;
+            padding: 27px 28px 29px;
             background: linear-gradient(142deg, rgba(8, 35, 54, 0.96), rgba(3, 19, 34, 0.98));
-            border: 1px solid rgba(61, 167, 207, 0.33);
+            border: 1px solid rgba(61, 167, 207, 0.40);
             border-radius: 19px;
             color: #edf8ff;
             overflow: hidden;
-            isolation: isolate;
             box-shadow: inset 0 1px 0 rgba(202, 243, 255, 0.035), 0 9px 28px rgba(0, 0, 0, 0.12);
-            transition: transform 0.23s ease, border-color 0.23s ease, box-shadow 0.23s ease;
+            cursor: default;
         }
 
         .kt-service-card::before {
             content: '';
             position: absolute;
             inset: 0;
-            z-index: -1;
             pointer-events: none;
-            background: radial-gradient(circle at 110% 120%, rgba(2, 177, 215, 0.1), transparent 49%);
-        }
-
-        .kt-service-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(0, 225, 239, 0.75);
-            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.22), 0 0 20px rgba(0, 224, 232, 0.08);
-        }
-
-        .kt-service-card:focus-visible {
-            outline: 3px solid #0be5ef;
-            outline-offset: 4px;
-        }
-
-        .kt-service-card--top {
-            min-height: 265px;
-        }
-
-        .kt-service-card--featured {
-            border: 2px solid #06f1e8;
-            padding: 26px 27px 25px;
-            background: linear-gradient(143deg, #063047, #041524 72%);
-            box-shadow: 0 0 18px rgba(0, 244, 220, 0.38), inset 0 0 20px rgba(0, 200, 190, 0.08);
-        }
-
-        .kt-service-card--featured:hover {
-            box-shadow: 0 0 27px rgba(0, 244, 220, 0.48), inset 0 0 20px rgba(0, 200, 190, 0.08);
+            background: radial-gradient(circle at 110% 120%, rgba(2, 177, 215, 0.10), transparent 49%);
         }
 
         .kt-service-icon {
+            position: relative;
             display: inline-flex;
             align-items: center;
             justify-content: flex-start;
@@ -629,11 +593,10 @@
             line-height: 1;
         }
 
-        .kt-service-card--featured .kt-service-icon { color: #14e47d; }
-
         .kt-service-title {
-            max-width: 350px;
-            margin: 0 32px 11px 0;
+            position: relative;
+            max-width: 360px;
+            margin: 0 0 11px;
             color: #f5fbff;
             font-size: clamp(1.20rem, 1.7vw, 1.45rem);
             font-weight: 800;
@@ -642,107 +605,12 @@
         }
 
         .kt-service-description {
-            max-width: 370px;
+            position: relative;
+            max-width: 380px;
             margin: 0;
-            padding-right: 20px;
             color: #cadbe8;
             font-size: 0.97rem;
             line-height: 1.46;
-        }
-
-        .kt-service-arrow {
-            position: absolute;
-            right: 19px;
-            bottom: 18px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 41px;
-            height: 41px;
-            border: 2px solid #05e1ef;
-            border-radius: 50%;
-            color: #08e3f0;
-            font-size: 1.18rem;
-            line-height: 1;
-            background: rgba(2, 16, 28, 0.70);
-            transition: background-color 0.23s ease, color 0.23s ease, transform 0.23s ease;
-        }
-
-        .kt-service-card:hover .kt-service-arrow,
-        .kt-service-card:focus-visible .kt-service-arrow {
-            background: #08e3ef;
-            color: #02121f;
-            transform: translateX(2px);
-        }
-
-        .kt-service-card--featured .kt-service-title,
-        .kt-service-card--featured .kt-service-description {
-            max-width: 60%;
-        }
-
-        .kt-services-phone {
-            position: absolute;
-            z-index: -1;
-            top: 20px;
-            right: 20px;
-            width: 122px;
-            height: 216px;
-            padding: 6px;
-            border: 2px solid #2de3ff;
-            border-radius: 23px;
-            background: #020e1a;
-            transform: rotate(12deg);
-            transform-origin: center;
-            box-shadow: 0 0 21px rgba(6, 230, 251, 0.38), 8px 16px 24px rgba(0, 0, 0, 0.6);
-        }
-
-        .kt-services-phone::before {
-            content: '';
-            position: absolute;
-            left: 40px;
-            right: 40px;
-            top: 7px;
-            height: 7px;
-            border-radius: 0 0 7px 7px;
-            background: #000912;
-            z-index: 2;
-        }
-
-        .kt-services-phone-screen {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 13px;
-            height: 100%;
-            padding: 24px 9px 12px;
-            border-radius: 16px;
-            background: linear-gradient(160deg, #041d2e, #00101c);
-            overflow: hidden;
-        }
-
-        .kt-services-phone-screen .fa-whatsapp {
-            color: #0bddcb;
-            font-size: 2rem;
-        }
-
-        .kt-phone-line {
-            display: block;
-            align-self: flex-start;
-            width: 85%;
-            height: 5px;
-            border-radius: 8px;
-            background: #2e6579;
-        }
-
-        .kt-phone-line--small { width: 55%; }
-        .kt-phone-line--medium { width: 72%; }
-        .kt-phone-message {
-            align-self: flex-end;
-            width: 75%;
-            height: 28px;
-            border-radius: 8px 8px 3px 8px;
-            background: #0a9b67;
-            box-shadow: inset 0 2px 0 rgba(255,255,255,0.08);
         }
 
         @media (max-width: 1120px) {
@@ -752,27 +620,14 @@
         @media (max-width: 700px) {
             .services-section { padding: 70px 0 75px; }
             .kt-services-heading { margin-bottom: 30px; }
-            .kt-services-eyebrow { font-size: 0.73rem; letter-spacing: 0.14em; }
             .kt-services-grid { grid-template-columns: 1fr; gap: 15px; }
-            .kt-service-card,
-            .kt-service-card--top { min-height: 218px; }
-            .kt-service-card--featured { min-height: 235px; }
+            .kt-service-card { min-height: 205px; }
             .kt-service-title { font-size: 1.29rem; }
             .kt-service-description { font-size: 0.95rem; }
         }
 
         @media (max-width: 430px) {
-            .kt-service-card { padding: 24px 22px 70px; }
-            .kt-service-card--featured { padding: 23px 21px 70px; }
-            .kt-service-card--featured .kt-service-title,
-            .kt-service-card--featured .kt-service-description { max-width: 100%; }
-            .kt-services-phone { display: none; }
-            .kt-service-description { padding-right: 0; }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .kt-service-card,
-            .kt-service-arrow { transition: none; }
+            .kt-service-card { padding: 24px 22px 26px; }
         }
 
         /* Sección Demo Gratuita */
@@ -1380,101 +1235,86 @@
         </div>
     </section>
 
-    <!-- Nuestras Soluciones — Point B -->
+    <!-- Soluciones KadmonTech — Point B: tarjetas informativas -->
     <section id="servicios" class="services-section" aria-labelledby="kt-services-title">
         <div class="container">
             <div class="kt-services-heading">
-                <p class="kt-services-eyebrow">NUESTRAS SOLUCIONES</p>
                 <h2 id="kt-services-title">Tecnología con IA para resultados reales</h2>
                 <p class="kt-services-lead">Soluciones concretas para optimizar, automatizar y escalar tu negocio.</p>
             </div>
             <div class="kt-services-grid">
-            <!-- Solución 01: Empleado Digital para WhatsApp -->
-            <a class="kt-service-card kt-service-card--featured kt-service-card--top" href="https://wa.me/5491157815136?text=Hola%20KadmonTech%2C%20quiero%20consultar%20sobre%20Empleado%20Digital%20para%20WhatsApp." target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp sobre Empleado Digital para WhatsApp">
-                <span class="kt-service-icon" aria-hidden="true"><i class="fab fa-whatsapp"></i></span>
-                <h3 class="kt-service-title">Empleado Digital para WhatsApp</h3>
-                <p class="kt-service-description">Un asistente con IA que responde, agenda turnos, acompaña tus ventas y funciona 24/7 por WhatsApp.</p>
-                <span class="kt-services-phone" aria-hidden="true">
-                    <span class="kt-services-phone-screen">
-                        <i class="fab fa-whatsapp"></i>
-                        <span class="kt-phone-line"></span>
-                        <span class="kt-phone-line kt-phone-line--small"></span>
-                        <span class="kt-phone-message"></span>
-                        <span class="kt-phone-line kt-phone-line--medium"></span>
-                    </span>
-                </span>
-                <span class="kt-service-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
-            </a>
-            <!-- Solución 02: Desarrollo Web y Plataformas -->
-            <a class="kt-service-card kt-service-card--top kt-service-card--top" href="https://wa.me/5491157815136?text=Hola%20KadmonTech%2C%20quiero%20consultar%20sobre%20Desarrollo%20Web%20y%20Plataformas." target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp sobre Desarrollo Web y Plataformas">
-                <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-desktop"></i></span>
-                <h3 class="kt-service-title">Desarrollo Web y Plataformas</h3>
-                <p class="kt-service-description">Sitios y aplicaciones modernas, rápidas y preparadas para integrar IA y automatizaciones.</p>
-                <span class="kt-service-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
-            </a>
-            <!-- Solución 03: Automatización de Procesos -->
-            <a class="kt-service-card kt-service-card--top kt-service-card--top" href="https://wa.me/5491157815136?text=Hola%20KadmonTech%2C%20quiero%20consultar%20sobre%20Automatizaci%C3%B3n%20de%20Procesos." target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp sobre Automatización de Procesos">
-                <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-layer-group"></i></span>
-                <h3 class="kt-service-title">Automatización de Procesos</h3>
-                <p class="kt-service-description">Conectamos tus herramientas, ordenamos tu operación y reducimos tareas repetitivas.</p>
-                <span class="kt-service-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
-            </a>
-            <!-- Solución 04: Gestión de Campañas de Publicidad Digital -->
-            <a class="kt-service-card" href="https://wa.me/5491157815136?text=Hola%20KadmonTech%2C%20quiero%20consultar%20sobre%20Gesti%C3%B3n%20de%20Campa%C3%B1as%20de%20Publicidad%20Digital." target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp sobre Gestión de Campañas de Publicidad Digital">
-                <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-bullhorn"></i></span>
-                <h3 class="kt-service-title">Gestión de Campañas de Publicidad Digital</h3>
-                <p class="kt-service-description">Planificamos, creamos y optimizamos campañas publicitarias con IA y métricas claras.</p>
-                <span class="kt-service-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
-            </a>
-            <!-- Solución 05: Automatización de Presupuestos y Facturas -->
-            <a class="kt-service-card" href="https://wa.me/5491157815136?text=Hola%20KadmonTech%2C%20quiero%20consultar%20sobre%20Automatizaci%C3%B3n%20de%20Presupuestos%20y%20Facturas." target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp sobre Automatización de Presupuestos y Facturas">
-                <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-file-invoice-dollar"></i></span>
-                <h3 class="kt-service-title">Automatización de Presupuestos y Facturas</h3>
-                <p class="kt-service-description">Cotizaciones, aprobaciones y facturación en un flujo más ágil y automatizado.</p>
-                <span class="kt-service-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
-            </a>
-            <!-- Solución 06: Panel de Control de Gestión -->
-            <a class="kt-service-card" href="https://wa.me/5491157815136?text=Hola%20KadmonTech%2C%20quiero%20consultar%20sobre%20Panel%20de%20Control%20de%20Gesti%C3%B3n." target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp sobre Panel de Control de Gestión">
-                <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-chart-bar"></i></span>
-                <h3 class="kt-service-title">Panel de Control de Gestión</h3>
-                <p class="kt-service-description">Dashboards para monitorear ventas, pagos, inventario y métricas clave de tu negocio.</p>
-                <span class="kt-service-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
-            </a>
-            <!-- Solución 07: Gestión Inteligente de Stock e Inventario -->
-            <a class="kt-service-card" href="https://wa.me/5491157815136?text=Hola%20KadmonTech%2C%20quiero%20consultar%20sobre%20Gesti%C3%B3n%20Inteligente%20de%20Stock%20e%20Inventario." target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp sobre Gestión Inteligente de Stock e Inventario">
-                <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-box"></i></span>
-                <h3 class="kt-service-title">Gestión Inteligente de Stock e Inventario</h3>
-                <p class="kt-service-description">Predicción de demanda y control inteligente para reducir faltantes, excesos y pérdidas.</p>
-                <span class="kt-service-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
-            </a>
-            <!-- Solución 08: Conciliación Bancaria Automatizada -->
-            <a class="kt-service-card" href="https://wa.me/5491157815136?text=Hola%20KadmonTech%2C%20quiero%20consultar%20sobre%20Conciliaci%C3%B3n%20Bancaria%20Automatizada." target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp sobre Conciliación Bancaria Automatizada">
-                <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-landmark"></i></span>
-                <h3 class="kt-service-title">Conciliación Bancaria Automatizada</h3>
-                <p class="kt-service-description">Importación, comparación e identificación de movimientos para agilizar conciliaciones.</p>
-                <span class="kt-service-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
-            </a>
-            <!-- Solución 09: Organización Automatizada de Comprobantes -->
-            <a class="kt-service-card" href="https://wa.me/5491157815136?text=Hola%20KadmonTech%2C%20quiero%20consultar%20sobre%20Organizaci%C3%B3n%20Automatizada%20de%20Comprobantes." target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp sobre Organización Automatizada de Comprobantes">
-                <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-file-alt"></i></span>
-                <h3 class="kt-service-title">Organización Automatizada de Comprobantes</h3>
-                <p class="kt-service-description">Clasificación, archivo y búsqueda inteligente de comprobantes de forma simple y segura.</p>
-                <span class="kt-service-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
-            </a>
-            <!-- Solución 10: Imágenes y Videos con IA Generativa -->
-            <a class="kt-service-card" href="https://wa.me/5491157815136?text=Hola%20KadmonTech%2C%20quiero%20consultar%20sobre%20Im%C3%A1genes%20y%20Videos%20con%20IA%20Generativa." target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp sobre Imágenes y Videos con IA Generativa">
-                <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-palette"></i></span>
-                <h3 class="kt-service-title">Imágenes y Videos con IA Generativa</h3>
-                <p class="kt-service-description">Contenido visual, videos y presentaciones con IA para comunicar mejor tu marca.</p>
-                <span class="kt-service-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
-            </a>
-            <!-- Solución 11: Consultoría Estratégica en IA -->
-            <a class="kt-service-card" href="https://wa.me/5491157815136?text=Hola%20KadmonTech%2C%20quiero%20consultar%20sobre%20Consultor%C3%ADa%20Estrat%C3%A9gica%20en%20IA." target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp sobre Consultoría Estratégica en IA">
-                <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-bullseye"></i></span>
-                <h3 class="kt-service-title">Consultoría Estratégica en IA</h3>
-                <p class="kt-service-description">Analizamos tu negocio, identificamos oportunidades y definimos un plan de IA alineado a tus objetivos.</p>
-                <span class="kt-service-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
-            </a>
+                <!-- Solución 01: Empleado Digital para WhatsApp -->
+                <article class="kt-service-card">
+                    <span class="kt-service-icon" aria-hidden="true"><i class="fab fa-whatsapp"></i></span>
+                    <h3 class="kt-service-title">Empleado Digital para WhatsApp</h3>
+                    <p class="kt-service-description">Un asistente con IA que responde, agenda turnos, acompaña tus ventas y funciona 24/7 por WhatsApp.</p>
+                </article>
+                <!-- Solución 02: Desarrollo Web y Plataformas -->
+                <article class="kt-service-card">
+                    <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-desktop"></i></span>
+                    <h3 class="kt-service-title">Desarrollo Web y Plataformas</h3>
+                    <p class="kt-service-description">Sitios y aplicaciones modernas, rápidas y preparadas para integrar IA y automatizaciones.</p>
+                </article>
+                <!-- Solución 03: Automatización de Procesos -->
+                <article class="kt-service-card">
+                    <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-layer-group"></i></span>
+                    <h3 class="kt-service-title">Automatización de Procesos</h3>
+                    <p class="kt-service-description">Conectamos tus herramientas, ordenamos tu operación y reducimos tareas repetitivas.</p>
+                </article>
+                <!-- Solución 04: Gestión de Campañas de Publicidad Digital -->
+                <article class="kt-service-card">
+                    <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-bullhorn"></i></span>
+                    <h3 class="kt-service-title">Gestión de Campañas de Publicidad Digital</h3>
+                    <p class="kt-service-description">Planificamos, creamos y optimizamos campañas publicitarias con IA y métricas claras.</p>
+                </article>
+                <!-- Solución 05: Automatización de Presupuestos y Facturas -->
+                <article class="kt-service-card">
+                    <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-file-invoice-dollar"></i></span>
+                    <h3 class="kt-service-title">Automatización de Presupuestos y Facturas</h3>
+                    <p class="kt-service-description">Cotizaciones, aprobaciones y facturación en un flujo más ágil y automatizado.</p>
+                </article>
+                <!-- Solución 06: Panel de Control de Gestión -->
+                <article class="kt-service-card">
+                    <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-chart-bar"></i></span>
+                    <h3 class="kt-service-title">Panel de Control de Gestión</h3>
+                    <p class="kt-service-description">Dashboards para monitorear ventas, pagos, inventario y métricas clave de tu negocio.</p>
+                </article>
+                <!-- Solución 07: Gestión Inteligente de Stock e Inventario -->
+                <article class="kt-service-card">
+                    <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-box"></i></span>
+                    <h3 class="kt-service-title">Gestión Inteligente de Stock e Inventario</h3>
+                    <p class="kt-service-description">Predicción de demanda y control inteligente para reducir faltantes, excesos y pérdidas.</p>
+                </article>
+                <!-- Solución 08: Conciliación Bancaria Automatizada -->
+                <article class="kt-service-card">
+                    <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-landmark"></i></span>
+                    <h3 class="kt-service-title">Conciliación Bancaria Automatizada</h3>
+                    <p class="kt-service-description">Importación, comparación e identificación de movimientos para agilizar conciliaciones.</p>
+                </article>
+                <!-- Solución 09: Organización Automatizada de Comprobantes -->
+                <article class="kt-service-card">
+                    <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-file-alt"></i></span>
+                    <h3 class="kt-service-title">Organización Automatizada de Comprobantes</h3>
+                    <p class="kt-service-description">Clasificación, archivo y búsqueda inteligente de comprobantes de forma simple y segura.</p>
+                </article>
+                <!-- Solución 10: Imágenes y Videos con IA Generativa -->
+                <article class="kt-service-card">
+                    <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-palette"></i></span>
+                    <h3 class="kt-service-title">Imágenes y Videos con IA Generativa</h3>
+                    <p class="kt-service-description">Contenido visual, videos y presentaciones con IA para comunicar mejor tu marca.</p>
+                </article>
+                <!-- Solución 11: Consultoría Estratégica en IA -->
+                <article class="kt-service-card">
+                    <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-bullseye"></i></span>
+                    <h3 class="kt-service-title">Consultoría Estratégica en IA</h3>
+                    <p class="kt-service-description">Analizamos tu negocio, identificamos oportunidades y definimos un plan de IA alineado a tus objetivos.</p>
+                </article>
+                <!-- Solución 12: CRM y Seguimiento Comercial con IA -->
+                <article class="kt-service-card">
+                    <span class="kt-service-icon" aria-hidden="true"><i class="fas fa-address-card"></i></span>
+                    <h3 class="kt-service-title">CRM y Seguimiento Comercial con IA</h3>
+                    <p class="kt-service-description">Organizamos tus contactos, oportunidades y seguimientos comerciales para que no pierdas potenciales clientes.</p>
+                </article>
             </div>
         </div>
     </section>
