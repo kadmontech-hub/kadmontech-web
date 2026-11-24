@@ -907,7 +907,7 @@
             .kt-review-card blockquote { margin-bottom: 24px; }
         }
 
-        /* Clientes — misma identidad navy/cian que el resto de KadmonTech */
+        /* Clientes — logos sin tarjetas, carrusel de borde a borde */
         .clients-section {
             background:
                 radial-gradient(ellipse 60% 80% at 50% 100%, rgba(0, 123, 166, 0.10), transparent 75%),
@@ -919,8 +919,17 @@
             border-bottom: 1px solid rgba(47, 165, 198, 0.16);
         }
 
+        /* Rompe el ancho máximo global: el carrusel ocupa todo el viewport. */
+        .clients-section > .container {
+            max-width: none;
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
         .clients-section .section-title {
             margin-bottom: 36px;
+            padding: 0 24px;
         }
 
         .clients-section .section-title h2 {
@@ -957,24 +966,24 @@
 
         .client-logo-slide {
             display: flex;
-            flex: 0 0 192px;
+            flex: 0 0 190px;
             align-items: center;
             justify-content: center;
-            height: 90px;
-            margin: 0 12px;
-            padding: 14px 18px;
-            border: 1px solid rgba(132, 201, 230, 0.27);
-            border-radius: 15px;
-            background: rgba(234, 246, 255, 0.94);
-            box-shadow: 0 7px 23px rgba(0, 0, 0, 0.16);
+            height: 92px;
+            margin: 0 clamp(20px, 2.4vw, 45px);
+            padding: 0;
+            border: none;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
         }
 
         .client-logo-slide img {
             display: block;
             width: auto;
             height: auto;
-            max-height: 60px;
             max-width: 100%;
+            max-height: 74px;
             object-fit: contain;
             opacity: 1;
             transition: transform 0.25s ease;
@@ -989,52 +998,25 @@
             100% { transform: translateX(-50%); }
         }
 
-        .clients-slider-container::before,
-        .clients-slider-container::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            width: 130px;
-            height: 100%;
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        .clients-slider-container::before {
-            left: 0;
-            background: linear-gradient(to right, #031423, transparent);
-        }
-
-        .clients-slider-container::after {
-            right: 0;
-            background: linear-gradient(to left, #031423, transparent);
-        }
-
         @media (max-width: 768px) {
             .clients-section { padding: 64px 0 72px; }
             .client-logo-slide {
-                flex-basis: 160px;
-                height: 76px;
-                margin: 0 9px;
-                padding: 12px 14px;
+                flex-basis: 155px;
+                height: 78px;
+                margin: 0 23px;
             }
-            .client-logo-slide img { max-height: 49px; }
-            .clients-slider-container::before,
-            .clients-slider-container::after { width: 75px; }
+            .client-logo-slide img { max-height: 57px; }
         }
 
         @media (max-width: 576px) {
             .clients-section { padding: 56px 0 64px; }
             .clients-section .section-title { margin-bottom: 28px; }
             .client-logo-slide {
-                flex-basis: 143px;
+                flex-basis: 132px;
                 height: 70px;
-                margin: 0 7px;
-                padding: 10px 12px;
+                margin: 0 17px;
             }
-            .client-logo-slide img { max-height: 43px; }
-            .clients-slider-container::before,
-            .clients-slider-container::after { width: 36px; }
+            .client-logo-slide img { max-height: 47px; }
         }
 
         @media (prefers-reduced-motion: reduce) {
