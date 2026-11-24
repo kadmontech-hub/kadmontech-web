@@ -977,63 +977,85 @@
             background: linear-gradient(to left, #f8faff, transparent);
         }
         
-        /* Sección Contacto por WhatsApp */
+        /* KadmonTech CTA final / Point B */
         .contact-section {
-            background-color: var(--dark);
-            color: white;
-            padding: 6rem 0;
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            min-height: 322px;
+            padding: 58px 0 104px;
             text-align: center;
+            color: #fff;
+            background:
+                linear-gradient(180deg, rgba(1, 9, 21, 0.32), rgba(1, 9, 21, 0.12) 58%, rgba(1, 9, 21, 0.10)),
+                url('data:image/webp;base64,UklGRoYGAABXRUJQVlA4IHoGAABwPgCdASr0AacAP1Wky1+xqz01o5DZm6AqiWNu3P+9/f/6LhgDAbCDXSdb+UWLMUf+H/x/8He0e8lHR/2PjkmZ+nTaZu39a6A5xc36TCY4ONOHUyoZBxpw6mVDId9snTIMcdZERzpUOpmD9vZ3ElUMTet2eERpx+7oPvBofM0y0BSobKrLxAgIT2WwLQnE/UiLpzXE3ZUjW6ZIdxac5iZUtxdhCKF5AL9gv+hiAP4s4PejDaUGFbvEysWa9E8lk0gLn9P7lypTcWLEm18QD97pP+aBy8AwrxfXcrRceK43yikwLG7eUU6pSdvPQn4Cr9Yg8IgSFxLc1hxu2cVKpt6nFbg9Y8xrsReROShjBvVubxd013G2i5cl8sU9S7JC0FTt3hi0mtFx1bk+vPbYuMB6FTZ3lwNNehQpD3zl0k4elf9tgoIXUlqx6auA9Xt6GPic31DbxxPi9QvTyG7l9M8BoHzPMUTuU25GKFuJcutqXtcGfX6BW0ocxREGfq3spG7QTrQQLnESFA56Td9PH2dQkVGVNwnn05tb92kTy2rsiCr0oVBcyUPB0NVRDS18c0pZP6Q7BLMA4NnwPYVrdMyYbxjhott+sbY5djAbGbdJDVcz15NI3bszK7rZR4zH3nPaOcVjZoMFrvTIxuJ6BHteBueaAhpLDlxOpM6AAP7vdibtgYsR0WA9JfYBQozuIzIBHagcc5VBIea36VeoFEN5AAAAAAASo7AjNdTLZMeMlrK/quGOQAAABNL+uvs9pQmwN1ygGX2AGEwPHRowyfKBCji4ULnt+LT8pVBFCvlJ125SQ4/sx13C6SR9H3eqkLy1kV9EEbqSD+08jmqniMHzb3nBZAJQ5jBSy+pJNNXa2vaUE9oNNRMBTUnSyH1yyhX1czoL+LqZyncTYZRoIi68in7poElSx2jdoSEL11eJ0DqCAgADhQ2Io0kIQ+M8dQpWiXad8lrIwUO1OW5cDRlmVad+D7ZNmH6L4mO6twdAkzfH3SZuff8NgnfRKOsVgMauq9RQquhaWQ0SS3pkP7OrBxek6NZZFMvzyc45JVqA3XIOAQinKoOGZIvmVKoG/liRs7rqbtuw0rvCbPsJRYbMlygQ7oKCSRpF3OKt9Re/OVjVVgIm+5k+ENeF5PdLSZeQO2iQH0kZPXuUVVHOx65exJz7J5M9lNaHFSHbxAK7dd0UnOU/d5AGNvVfG1Y5nc30xwV2g5VynQD8L3kyXV5COcPcciFDDWy3KR0pTKbcwt1mlh9kJKjNC8q+aOT166alxHe+CUtToQqdROBOi42YKCa72wiwIFUXJOF1K8/8ivnnIZDPovprhZpajRWEEY8DHQPYypboSlY6ycAqPPS3cAuIQfkTNZRb94XtafO0V/iDr54mpYX3Vjg8KlGTEPDXStQt1+lJr1qxThBN/lzNQtEbscHs8OoWLPPYx6gUf4qWdf5XDo99szDyuBANadXOLQ/SOOlcrRMMkTM12v8AbzyubuAsQNrp9wRwIEx96Kue8Dy6QGjUIW19unl1me0sjY+9NZqqgDA8leHMLrvHfjIhat5j5KJW2TQq85vXoV+/0a1BwbbZ1XCUls5xLtxfURj8SfJBgfEI1gRIAo2Ev+MwOPRsGAv6EI5y6k+1rtr9q1IBD/OfDZNnorbNodF9g4q61QM6j21ahtet0x3cwnfI87/SdbSXXEQaPKvw/G0hnAiawxdh5paah2i1+g5zRx1o5+Tz6t+vCV+f6/FbHqp3Pdd9eaxYoSi1mLd0xHQgy9pQR/qkmB7bJ4BHNc+x7tUAaygJBKeBoBY9MMdgmPrBKFhg21wTYEItGw+5VzcyHJy1OcyVqnpJR25iIvNbqC3TXewGz6RPijo9A/YIbKqLq8TvyHYw9GQZSHSca22Rfdb4nzTriXBow3H2ZWEjug9HA9KE0VN+9lWUpFlpY067sG98dLAoIQmL/Xy7MTt/Y+++O9GOnv/1PYbuSwgsQE9ZPAtJhGtPGHG3Xh16DLiZmuydZBihhOb43Gi76ILN+VSkWK6qc2PKLaU2UYgH7lqNHGEN5MT8oMVKWff7OldYCtBHbiEKsBixoYVCELTxSNKgilv6hGQUSiTpxgCqgRB/Je8klYysuhMjREDJAyZ3MQGmO6q9EHPwCDXXGwJtc6jrprKFi9X/TvE1zi8xr4VFEAAAAAADgeEoAS1Dt5oOB6ucGAAAAA==') center 56% / cover no-repeat,
+                #020d1b;
+            border-top: 1px solid rgba(13, 213, 234, 0.16);
         }
-        
+        .contact-section .container {
+            max-width: 1220px;
+            padding-left: 22px;
+            padding-right: 22px;
+        }
         .contact-section h2 {
-            color: white;
+            margin: 0 auto 12px;
+            color: #fff;
+            font-size: clamp(1.75rem, 3vw, 2.55rem);
+            font-weight: 800;
+            line-height: 1.19;
+            letter-spacing: -0.03em;
         }
-        
-        .contact-container {
-            max-width: 700px;
+        .contact-copy {
+            max-width: 870px;
             margin: 0 auto;
+            color: #d9eaf1;
+            font-size: clamp(0.95rem, 1.15vw, 1.08rem);
+            line-height: 1.55;
         }
-        
-        .whatsapp-cta {
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 3rem;
-            border-radius: var(--border-radius);
-            margin-top: 2rem;
-            border: 2px solid rgba(37, 211, 102, 0.2);
-        }
-        
-        .whatsapp-cta h3 {
-            color: white;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-        }
-        
-        .whatsapp-cta p {
-            margin-bottom: 2rem;
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        .whatsapp-info {
-            display: flex;
-            flex-direction: column;
+        .contact-cta {
+            display: inline-flex;
             align-items: center;
-            gap: 1.5rem;
-            margin-top: 2.5rem;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 23px;
+            min-height: 55px;
+            padding: 14px 32px;
+            border-radius: 999px;
+            border: 0;
+            color: #00231d;
+            background: linear-gradient(100deg, #09eac1, #1ff28f);
+            box-shadow: 0 0 24px rgba(0, 235, 180, 0.50), 0 8px 24px rgba(0, 0, 0, 0.24);
+            font-size: clamp(0.91rem, 1.04vw, 1.06rem);
+            font-weight: 800;
+            line-height: 1.26;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
-        .whatsapp-info-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            font-size: 1.2rem;
+        .contact-cta:hover {
+            color: #00231d;
+            background: linear-gradient(100deg, #4fffe0, #70ffc0);
+            transform: translateY(-2px);
+            box-shadow: 0 0 33px rgba(0, 235, 180, 0.63);
         }
-        
-        .whatsapp-info-item i {
-            color: #25D366;
-            font-size: 1.5rem;
+        .contact-cta:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+        .contact-cta i { font-size: 1.2rem; }
+        @media (max-width: 700px) {
+            .contact-section {
+                min-height: 350px;
+                padding: 62px 0 116px;
+                background-position: center, center 65%;
+            }
+            .contact-section h2 { font-size: clamp(1.85rem, 6.6vw, 2.4rem); }
+            .contact-cta { max-width: 100%; padding: 14px 20px; }
         }
-        
+        @media (max-width: 450px) {
+            .contact-section { min-height: 375px; padding: 53px 0 126px; }
+            .contact-cta { width: 100%; gap: 8px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .contact-cta { transition: none; }
+        }
+
         /* Footer */
         footer {
             background-color: #0a0f25;
@@ -1234,7 +1256,6 @@
             .client-logo-slide img { height: 40px; max-width: 110px; }
             .clients-slider-container::before,
             .clients-slider-container::after { width: 60px; }
-            .whatsapp-cta { padding: 2rem 1.5rem; }
         }
     </style>
 </head>
@@ -1550,45 +1571,17 @@
         </div>
     </section>
 
-    <!-- Contacto por WhatsApp -->
-    <section id="contacto" class="contact-section">
+    <!-- CTA final / WhatsApp -->
+    <section id="contacto" class="contact-section" aria-labelledby="contact-title">
         <div class="container">
-            <div class="section-title">
-                <h2>¿Listo para transformar tu negocio con IA?</h2>
-                <p>Todo comienza con una conversación por WhatsApp</p>
-            </div>
-            
-            <div class="contact-container">
-                <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
-                    En KadmonTech creemos en la comunicación directa y eficiente. Todas nuestras consultas, cotizaciones y servicios se manejan directamente por WhatsApp para ofrecerte una atención rápida y personalizada.
-                </p>
-                
-                <div class="whatsapp-cta">
-                    <h3>¡Contáctanos ahora por WhatsApp!</h3>
-
-                    <a href="https://wa.me/5491157815136?text=Hola%20KadmonTech,%20quiero%20transformar%20mi%20negocio%20con%20IA.%20%C2%BFPodemos%20conversar?" 
-                       target="_blank" 
-                       class="btn btn-whatsapp" 
-                       style="padding: 1.2rem 3rem; font-size: 1.2rem;">
-                        <i class="fab fa-whatsapp"></i> INICIAR CONVERSACIÓN
-                    </a>
-                    
-                    <div class="whatsapp-info">
-                        <div class="whatsapp-info-item">
-                            <i class="fab fa-whatsapp"></i>
-                            <span>+54 9 11 5781-5136</span>
-                        </div>
-                        <div class="whatsapp-info-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>asesoramiento@kadmontech.com</span>
-                        </div>
-                        <div class="whatsapp-info-item">
-                            <i class="fas fa-globe"></i>
-                            <span>www.kadmontech.com</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h2 id="contact-title">¿Listo para llevar tu negocio al siguiente nivel?</h2>
+            <p class="contact-copy">Agendá una asesoría gratuita de 25 minutos y descubrí cómo aplicar la IA en tu empresa.</p>
+            <a class="contact-cta"
+               href="https://wa.me/5491157815136?text=Hola%20KadmonTech%2C%20quiero%20agendar%20una%20asesor%C3%ADa%20gratuita%20de%2025%20minutos."
+               target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                <span>Agendar Demo Gratuita por WhatsApp</span>
+            </a>
         </div>
     </section>
 
