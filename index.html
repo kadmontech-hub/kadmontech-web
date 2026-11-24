@@ -630,80 +630,149 @@
             .kt-service-card { padding: 24px 22px 26px; }
         }
 
-        /* Sección Demo Gratuita */
-        .demo-section {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            color: white;
-            padding: 6rem 0;
-            text-align: center;
+        /* Nuestro método — 3 pasos / Point B */
+        .method-section {
+            position: relative;
+            padding: 66px 0 70px;
+            color: #f5fbff;
+            background:
+                radial-gradient(ellipse 28% 100% at 0% 0%, rgba(0, 168, 189, 0.09), transparent 80%),
+                linear-gradient(110deg, #061d2e 0%, #041627 55%, #031422 100%);
+            border-top: 1px solid rgba(35, 123, 155, 0.20);
+            border-bottom: 1px solid rgba(35, 123, 155, 0.14);
+            scroll-margin-top: 70px;
         }
-        
-        .demo-content {
-            max-width: 800px;
-            margin: 0 auto;
+
+        .method-section > .container {
+            max-width: 1390px;
+            padding-left: clamp(24px, 4.5vw, 70px);
+            padding-right: clamp(24px, 4.5vw, 70px);
         }
-        
-        .demo-title {
-            color: white;
-            font-size: 2.8rem;
-            margin-bottom: 1.5rem;
+
+        .method-layout {
+            display: grid;
+            grid-template-columns: minmax(245px, 0.95fr) minmax(0, 2.65fr);
+            gap: clamp(36px, 5vw, 75px);
+            align-items: start;
         }
-        
-        .demo-subtitle {
-            font-size: 1.3rem;
-            opacity: 0.95;
-            margin-bottom: 3rem;
-            line-height: 1.6;
+
+        .method-eyebrow {
+            margin: 0 0 10px;
+            color: #09e6ed;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.13em;
+            line-height: 1.3;
         }
-        
-        .demo-steps {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 3rem 0;
-            flex-wrap: wrap;
+
+        .method-intro h2 {
+            max-width: 380px;
+            margin: 0 0 16px;
+            color: #ffffff;
+            font-size: clamp(1.8rem, 2.45vw, 2.6rem);
+            font-weight: 800;
+            letter-spacing: -0.035em;
+            line-height: 1.16;
         }
-        
-        .demo-step {
-            flex: 1;
-            min-width: 200px;
-            text-align: center;
-            padding: 1.5rem;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: var(--border-radius);
-            backdrop-filter: blur(10px);
+
+        .method-description {
+            max-width: 335px;
+            margin: 0;
+            color: #afc3d0;
+            font-size: 1.02rem;
+            line-height: 1.56;
         }
-        
-        .demo-step-number {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background-color: var(--secondary);
-            color: white;
+
+        .method-steps {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            column-gap: clamp(22px, 2.4vw, 38px);
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .method-step {
+            position: relative;
+            min-width: 0;
+        }
+
+        .method-step:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            top: 22px;
+            left: 59px;
+            width: calc(100% - 36px);
+            height: 1px;
+            background: linear-gradient(90deg, rgba(61, 207, 230, 0.55), rgba(80, 177, 210, 0.25));
+            pointer-events: none;
+        }
+
+        .method-step-number {
+            display: grid;
+            place-items: center;
+            width: 46px;
+            height: 46px;
+            margin-bottom: 16px;
+            border: 2px solid #06e8ec;
             border-radius: 50%;
-            line-height: 40px;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
+            background: rgba(3, 33, 50, 0.75);
+            box-shadow: 0 0 15px rgba(0, 224, 231, 0.24), inset 0 0 9px rgba(0, 224, 231, 0.09);
+            color: #e7fbff;
+            font-size: 1.25rem;
+            line-height: 1;
+            font-weight: 800;
         }
-        
-        .demo-step h4 {
-            color: white;
-            margin-bottom: 0.5rem;
+
+        .method-step h3 {
+            margin: 0 0 7px;
+            color: #ffffff;
+            font-size: clamp(1.08rem, 1.25vw, 1.25rem);
+            font-weight: 800;
+            line-height: 1.23;
         }
-        
-        .demo-cta {
-            margin-top: 3rem;
+
+        .method-step p {
+            max-width: 260px;
+            margin: 0;
+            color: #b8c9d5;
+            font-size: 0.96rem;
+            line-height: 1.46;
         }
-        
-        .demo-cta .btn {
-            padding: 1.2rem 3rem;
-            font-size: 1.2rem;
-            background-color: #25D366;
+
+        @media (max-width: 1040px) {
+            .method-layout {
+                grid-template-columns: minmax(210px, 0.92fr) minmax(0, 2.6fr);
+                gap: 33px;
+            }
+
+            .method-steps { column-gap: 21px; }
+            .method-step:not(:last-child)::after { width: calc(100% - 38px); }
         }
-        
-        .demo-cta .btn:hover {
-            background-color: #1da851;
+
+        @media (max-width: 780px) {
+            .method-section { padding: 62px 0; }
+            .method-layout { grid-template-columns: 1fr; gap: 34px; }
+            .method-intro h2 { max-width: 570px; }
+            .method-description { max-width: 590px; }
+        }
+
+        @media (max-width: 530px) {
+            .method-section { padding: 50px 0 56px; }
+            .method-intro h2 { font-size: clamp(1.85rem, 7.8vw, 2.35rem); }
+            .method-layout { gap: 28px; }
+            .method-steps { grid-template-columns: 1fr; gap: 23px; }
+            .method-step { min-height: 78px; padding-left: 70px; }
+            .method-step-number { position: absolute; top: 0; left: 0; width: 44px; height: 44px; margin: 0; }
+            .method-step:not(:last-child)::after {
+                left: 21px;
+                top: 53px;
+                width: 1px;
+                height: calc(100% - 31px);
+                background: linear-gradient(180deg, rgba(61, 207, 230, 0.55), rgba(80, 177, 210, 0.25));
+            }
+            .method-step h3 { padding-top: 1px; font-size: 1.15rem; }
+            .method-step p { max-width: 100%; }
         }
 
         /* ===== SECCIÓN TESTIMONIOS ===== */
@@ -1115,7 +1184,6 @@
             h1 { font-size: 2.8rem; }
             h2 { font-size: 2.2rem; }
             .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
-            .demo-title { font-size: 2.4rem; }
             .client-logo-slide { padding: 0 2rem; }
             .client-logo-slide img { height: 50px; max-width: 150px; }
         }
@@ -1139,7 +1207,6 @@
             .nav-links li { margin: 0 0 1.5rem 0; }
             .nav-links a { color: var(--dark); text-shadow: none; }
             .testimonials-grid { grid-template-columns: 1fr; }
-            .demo-steps { flex-direction: column; gap: 1.5rem; }
             .client-logo-slide { padding: 0 1.5rem; }
             .client-logo-slide img { height: 45px; max-width: 130px; }
             .clients-slider-container::before,
@@ -1152,7 +1219,6 @@
             h1 { font-size: 2.3rem; }
             h2 { font-size: 1.9rem; }
             section { padding: 4rem 0; }
-            .demo-title { font-size: 2rem; }
             .client-logo-slide { padding: 0 1rem; }
             .client-logo-slide img { height: 40px; max-width: 110px; }
             .clients-slider-container::before,
@@ -1187,7 +1253,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#demo">Demo Gratis</a></li>
+                <li><a href="#demo">Método</a></li>
                 <li><a href="#testimonios">Testimonios</a></li>
                 <li><a href="#clientes">Clientes</a></li>
                 <li><a href="#contacto">Contacto</a></li>
@@ -1319,41 +1385,31 @@
         </div>
     </section>
 
-    <!-- Demo Gratuita -->
-    <section id="demo" class="demo-section">
-        <div class="container">
-            <div class="demo-content">
-                <h2 class="demo-title">Asesoría de 25 min y Demo GRATIS</h2>
-                <p class="demo-subtitle">Tu primer paso con la IA, sin riesgo. En 25 minutos resolveremos dónde aplicar la IA en tu negocio y definiremos tu siguiente paso claro.</p>
-                
-                <div class="demo-steps">
-                    <div class="demo-step">
-                        <div class="demo-step-number">1</div>
-                        <h4>Identificación de Oportunidades</h4>
-                        <p>Análisis personalizado para descubrir dónde la IA puede transformar tu negocio</p>
-                    </div>
-                    
-                    <div class="demo-step">
-                        <div class="demo-step-number">2</div>
-                        <h4>Demostración en Vivo</h4>
-                        <p>Veremos cómo nuestra IA puede resolver tus desafíos con casos prácticos</p>
-                    </div>
-                    
-                    <div class="demo-step">
-                        <div class="demo-step-number">3</div>
-                        <h4>Plan de Acción Claro</h4>
-                        <p>Definiremos juntos los pasos concretos para implementar la solución ideal</p>
-                    </div>
-                </div>
-                
-                <div class="demo-cta">
-                    <a href="https://wa.me/5491157815136?text=Hola%20KadmonTech,%20quiero%20agendar%20mi%20demo%20gratuita%20de%2025%20minutos" 
-                       target="_blank" 
-                       class="btn">
-                        <i class="fab fa-whatsapp"></i> AGENDAR DEMO GRATIS POR WHATSAPP
-                    </a>
-                </div>
+    <!-- Nuestro Método — diagnóstico, solución y resultados -->
+    <section id="demo" class="method-section" aria-labelledby="method-title">
+        <div class="container method-layout">
+            <div class="method-intro">
+                <p class="method-eyebrow">NUESTRO MÉTODO</p>
+                <h2 id="method-title">De la idea al resultado,<br>en 3 pasos.</h2>
+                <p class="method-description">Un proceso simple, claro y enfocado en generar valor real para tu negocio.</p>
             </div>
+            <ol class="method-steps" aria-label="Nuestro proceso de trabajo en tres pasos">
+                <li class="method-step">
+                    <span class="method-step-number" aria-hidden="true">1</span>
+                    <h3>Diagnóstico</h3>
+                    <p>Analizamos tu negocio y detectamos oportunidades reales con IA.</p>
+                </li>
+                <li class="method-step">
+                    <span class="method-step-number" aria-hidden="true">2</span>
+                    <h3>Solución</h3>
+                    <p>Diseñamos e implementamos la tecnología ideal para tus objetivos.</p>
+                </li>
+                <li class="method-step">
+                    <span class="method-step-number" aria-hidden="true">3</span>
+                    <h3>Resultados</h3>
+                    <p>Medimos, optimizamos y escalamos el impacto en tu operación.</p>
+                </li>
+            </ol>
         </div>
     </section>
 
@@ -1568,7 +1624,7 @@
                         <li><a href="#servicios">Organización de Comprobantes</a></li>
                         <li><a href="#servicios">Consultoría Estratégica en IA</a></li>
                         <li><a href="#testimonios">Testimonios</a></li>
-                        <li><a href="#demo">Demo Gratuita 25 min</a></li>
+                        <li><a href="#demo">Nuestro método</a></li>
                         <li><a href="#contacto">Contacto por WhatsApp</a></li>
                     </ul>
                 </div>
@@ -1659,7 +1715,7 @@
             });
         }, observerOptions);
         
-        document.querySelectorAll('.service-card, .demo-step, .testimonial-card').forEach(el => {
+        document.querySelectorAll('.service-card, .testimonial-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
@@ -1703,7 +1759,7 @@
         
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
-                document.querySelectorAll('.service-card, .demo-step, .testimonial-card').forEach((el, index) => {
+                document.querySelectorAll('.service-card, .testimonial-card').forEach((el, index) => {
                     setTimeout(() => {
                         el.style.opacity = '1';
                         el.style.transform = 'translateY(0)';
