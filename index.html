@@ -1295,6 +1295,7 @@
             section { padding: 4rem 0; }
         }
     </style>
+    <link rel="stylesheet" href="/captacion.css">
 </head>
 <body>
     <!-- WhatsApp Widget -->
@@ -1326,6 +1327,7 @@
                 <li><a href="#testimonios">Testimonios</a></li>
                 <li><a href="#clientes">Clientes</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#solicitud">Solicitar propuesta</a></li>
             </ul>
         </div>
     </header>
@@ -1352,6 +1354,7 @@
                     </a>
                 </div>
 
+                <a href="#solicitud" class="hero-intake-link">¿Tenés otro proyecto? Contanos qué necesitás <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                 <div class="hero-features" aria-label="Beneficios de KadmonTech">
                     <div class="hero-feature">
                         <i class="fas fa-bolt" aria-hidden="true"></i>
@@ -1453,6 +1456,8 @@
             </div>
         </div>
     </section>
+
+<div class="container kt-intake-inline-cta"><a href="#solicitud">¿Necesitás otra solución? Contanos tu proyecto <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
 
     <!-- Nuestro Método — diagnóstico, solución y resultados -->
     <section id="demo" class="method-section" aria-labelledby="method-title">
@@ -1622,6 +1627,69 @@
         </div>
     </section>
 
+
+    <!-- Punto único de captación de oportunidades comerciales -->
+    <section class="kt-intake" id="solicitud" aria-labelledby="kt-intake-title">
+      <div class="container kt-intake-layout">
+        <div class="kt-intake-intro">
+          <span class="kt-intake-eyebrow">HABLEMOS DE TU PROYECTO</span>
+          <h2 id="kt-intake-title">Contanos qué <span>necesitás.</span></h2>
+          <p>¿Tenés una idea, un proyecto o un problema que querés resolver con tecnología? Contanos un poco y conversemos sobre cómo podemos ayudarte.</p>
+          <ol class="kt-intake-steps">
+            <li><span class="kt-intake-step-icon"><i class="fas fa-check" aria-hidden="true"></i></span><span><strong>Elegí lo que necesitás</strong>Podés seleccionar uno o varios servicios.</span></li>
+            <li><span class="kt-intake-step-icon"><i class="fas fa-pen" aria-hidden="true"></i></span><span><strong>Contanos tu idea</strong>Solo los datos esenciales. Menos de dos minutos.</span></li>
+            <li><span class="kt-intake-step-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></span><span><strong>Seguimos por WhatsApp</strong>Guardamos tu solicitud antes de abrir la conversación.</span></li>
+          </ol>
+        </div>
+        <div class="kt-intake-panel">
+          <div id="kt-intake-form-wrap">
+            <h3>Empecemos por lo esencial.</h3>
+            <p class="kt-intake-hint">Completá los datos y recibiremos tu solicitud.</p>
+            <form id="kt-intake-form" novalidate>
+              <div class="kt-intake-fields">
+                <div class="kt-intake-field"><label for="kt-full-name">Nombre y apellido *</label><input id="kt-full-name" name="fullName" type="text" autocomplete="name" maxlength="160" placeholder="Tu nombre completo" required></div>
+                <div class="kt-intake-field"><label for="kt-business">Negocio o proyecto <span class="kt-intake-optional">(opcional)</span></label><input id="kt-business" name="businessName" type="text" maxlength="160" autocomplete="organization" placeholder="Nombre de tu empresa o idea"></div>
+                <div class="kt-intake-field full"><label for="kt-whatsapp">WhatsApp de contacto *</label><input id="kt-whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" maxlength="40" placeholder="+54 9 11 1234 5678" required aria-describedby="kt-whatsapp-help"><small id="kt-whatsapp-help">Incluí el código de país. Ejemplo: +54 9 11 1234 5678.</small></div>
+              </div>
+              <fieldset>
+                <legend>¿En qué podemos ayudarte? * <span class="kt-intake-optional">(podés elegir varios)</span></legend>
+                <div id="kt-intake-services" class="kt-intake-services">
+                  <label class="kt-intake-service" for="kt-service-0"><input type="checkbox" id="kt-service-0" name="services" value="Agentes de inteligencia artificial / WhatsApp"><span>Agentes de inteligencia artificial / WhatsApp</span></label>
+                  <label class="kt-intake-service" for="kt-service-1"><input type="checkbox" id="kt-service-1" name="services" value="Automatización de procesos"><span>Automatización de procesos</span></label>
+                  <label class="kt-intake-service" for="kt-service-2"><input type="checkbox" id="kt-service-2" name="services" value="Desarrollo web y páginas profesionales"><span>Desarrollo web y páginas profesionales</span></label>
+                  <label class="kt-intake-service" for="kt-service-3"><input type="checkbox" id="kt-service-3" name="services" value="Desarrollo de software o plataformas a medida"><span>Desarrollo de software o plataformas a medida</span></label>
+                  <label class="kt-intake-service" for="kt-service-4"><input type="checkbox" id="kt-service-4" name="services" value="Marketing digital y publicidad"><span>Marketing digital y publicidad</span></label>
+                  <label class="kt-intake-service" for="kt-service-5"><input type="checkbox" id="kt-service-5" name="services" value="Contenido para redes sociales"><span>Contenido para redes sociales</span></label>
+                  <label class="kt-intake-service" for="kt-service-6"><input type="checkbox" id="kt-service-6" name="services" value="Imágenes y videos con inteligencia artificial"><span>Imágenes y videos con inteligencia artificial</span></label>
+                  <label class="kt-intake-service" for="kt-service-7"><input type="checkbox" id="kt-service-7" name="services" value="Consultoría tecnológica"><span>Consultoría tecnológica</span></label>
+                  <label class="kt-intake-service" for="kt-service-8"><input type="checkbox" id="kt-service-8" name="services" value="Necesito asesoramiento para definir la solución"><span>Necesito asesoramiento para definir la solución</span></label>
+                </div>
+                <div id="kt-services-error" class="kt-intake-services-error" aria-live="polite"></div>
+              </fieldset>
+              <div class="kt-intake-fields">
+                <div class="kt-intake-field full"><label for="kt-description">Contanos brevemente tu idea o necesidad <span class="kt-intake-optional">(opcional)</span></label><textarea id="kt-description" name="description" maxlength="3000" placeholder="¿Qué te gustaría construir, automatizar, mejorar o resolver?"></textarea></div>
+                <div class="kt-intake-field full"><label for="kt-timing">¿Cuándo te gustaría empezar?</label><select id="kt-timing" name="timing"><option value="">Seleccioná un plazo (opcional)</option><option>Lo antes posible</option><option>Durante el próximo mes</option><option>Estoy explorando posibilidades</option></select></div>
+              </div>
+              <div class="kt-honeypot" aria-hidden="true"><label for="kt-website">Sitio web</label><input id="kt-website" name="website" type="text" autocomplete="off" tabindex="-1"></div>
+              <label class="kt-intake-consent" for="kt-consent"><input type="checkbox" id="kt-consent" name="consent" required><span>Leí y acepto la <a href="/privacidad.html" target="_blank" rel="noopener noreferrer">política de privacidad</a> y autorizo a KadmonTech a contactarme exclusivamente para atender esta solicitud. <strong>Obligatorio.</strong></span></label>
+              <div id="kt-intake-feedback" class="kt-intake-feedback" role="alert" aria-live="assertive"></div>
+              <button id="kt-intake-submit" type="submit" class="kt-intake-submit"><span>Enviar mi solicitud</span><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+              <small class="kt-intake-form-note">Tus datos se utilizan para responder tu consulta. No te suscribimos a campañas.</small>
+            </form>
+          </div>
+          <div id="kt-intake-success" class="kt-intake-success" role="status" aria-live="polite" tabindex="-1">
+            <div class="kt-intake-success-icon"><i class="fas fa-check" aria-hidden="true"></i></div>
+            <h3>¡Solicitud registrada!</h3>
+            <p>Guardamos los datos de tu proyecto. Podés continuar por WhatsApp con un resumen preparado para enviar manualmente.</p>
+            <div id="kt-intake-reference" class="kt-intake-reference"></div>
+            <a id="kt-intake-open-whatsapp" href="#" class="kt-intake-whatsapp-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Abrir WhatsApp</a>
+            <p style="font-size:12px;margin-top:12px">Abrir WhatsApp no envía el mensaje automáticamente. Si no se abre, usá el botón de arriba.</p>
+            <button id="kt-intake-again" type="button" class="kt-intake-again">Hacer otra solicitud</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -1664,6 +1732,7 @@
                         <li><a href="#testimonios">Testimonios</a></li>
                         <li><a href="#demo">Nuestro método</a></li>
                         <li><a href="#contacto">Contacto por WhatsApp</a></li>
+                        <li><a href="#solicitud">Enviar una solicitud</a></li>
                     </ul>
                 </div>
                 
@@ -1806,5 +1875,6 @@
             }, 300);
         });
     </script>
+    <script src="/captacion.js" defer></script>
 </body>
 </html>
