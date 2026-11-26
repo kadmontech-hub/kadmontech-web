@@ -61,7 +61,7 @@
       "logo": "https://i.imgur.com/viGbw2a.png",
       "@id": "https://kadmontech.com",
       "url": "https://kadmontech.com",
-      "telephone": "+5491157815136",
+      "telephone": "+5491126143766",
       "priceRange": "$$$",
       "address": {
         "@type": "PostalAddress",
@@ -74,8 +74,7 @@
         "closes": "18:00"
       },
       "sameAs": [
-        "https://wa.me/5491157815136",
-        "https://www.instagram.com/kadmontech/"
+        "https://wa.me/5491126143766"
       ]
     }
     </script>
@@ -1103,95 +1102,109 @@
             .contact-cta { transition: none; }
         }
 
-        /* Footer */
-        footer {
-            background-color: #0a0f25;
-            color: #aaa;
-            padding: 4rem 0 2rem;
+        /* KadmonTech — footer minimalista */
+        footer.kt-footer {
+            background: #020d19;
+            color: #a7bdc9;
+            padding: 44px 0 24px;
+            border-top: 1px solid rgba(29, 209, 223, 0.16);
         }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-        
-        .footer-column h3 {
-            color: white;
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 0.7rem;
-        }
-        
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 3px;
-            background-color: var(--secondary);
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .footer-links a {
-            transition: var(--transition);
-        }
-        
-        .footer-links a:hover {
-            color: var(--secondary);
-            padding-left: 5px;
-        }
-        
-        .footer-contact p {
+        .kt-footer .container { max-width: 1200px; }
+        .kt-footer-top {
             display: flex;
-            align-items: flex-start;
-            margin-bottom: 1rem;
+            justify-content: space-between;
+            align-items: center;
+            gap: 26px;
+            padding-bottom: 34px;
         }
-        
-        .footer-contact i {
-            margin-right: 0.8rem;
-            color: var(--secondary);
-            margin-top: 0.2rem;
+        .kt-footer-brand {
+            font-size: 1.55rem;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.045em;
+            color: #fff;
+            text-decoration: none;
         }
-        
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
+        .kt-footer-brand span { color: #0cdae5; }
+        .kt-footer-tagline {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #a8c0cc;
+            margin: 9px 0 0;
         }
-        
-        .social-icons a {
+        .kt-footer-actions {
             display: flex;
             align-items: center;
+            justify-content: flex-end;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .kt-footer-actions a {
+            display: inline-flex;
+            align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            transition: var(--transition);
+            gap: 9px;
+            min-height: 43px;
+            padding: 10px 16px;
+            border: 1px solid #2b576a;
+            background: #0a2636;
+            border-radius: 10px;
+            color: #dbeef5;
+            font-size: 0.85rem;
+            font-weight: 700;
+            line-height: 1.25;
+            text-decoration: none;
+            transition: border-color 160ms ease, background 160ms ease;
         }
-        
-        .social-icons a:hover {
-            background-color: var(--secondary);
-            transform: translateY(-3px);
+        .kt-footer-actions a:hover {
+            border-color: #0bd6e5;
+            background: #0e3548;
+            color: #fff;
         }
-        
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 2rem;
-            text-align: center;
+        .kt-footer-actions a.kt-footer-primary {
+            background: #00d9e7;
+            color: #00232d;
+            border-color: #00d9e7;
         }
-        
+        .kt-footer-actions a.kt-footer-primary:hover {
+            background: #43eef3;
+            border-color: #43eef3;
+            color: #00232d;
+        }
+        .kt-footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(153, 209, 222, 0.13);
+            font-size: 0.79rem;
+            color: #7995a5;
+        }
+        .kt-footer-bottom p { margin: 0; }
+        .kt-footer-legal { display: flex; align-items: center; gap: 19px; }
+        .kt-footer-legal a {
+            color: #9cb9c8;
+            text-decoration: none;
+            transition: color 160ms ease;
+        }
+        .kt-footer-legal a:hover { color: #42ecf2; }
+        .kt-footer a:focus-visible { outline: 2px solid #48ebf4; outline-offset: 4px; }
+        @media (max-width: 760px) {
+            footer.kt-footer { padding: 38px 0 24px; }
+            .kt-footer-top { flex-direction: column; align-items: flex-start; gap: 22px; padding-bottom: 26px; }
+            .kt-footer-actions { justify-content: flex-start; width: 100%; }
+            .kt-footer-actions a { flex: 1; min-width: 135px; }
+            .kt-footer-bottom { align-items: flex-start; flex-wrap: wrap; gap: 10px; }
+        }
+        @media (max-width: 420px) {
+            .kt-footer-actions { flex-wrap: wrap; }
+            .kt-footer-actions a { flex-basis: 100%; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .kt-footer-actions a, .kt-footer-legal a { transition: none; }
+        }
+
         /* WhatsApp Widget */
         .whatsapp-widget {
             position: fixed;
@@ -1301,7 +1314,7 @@
     <!-- WhatsApp Widget -->
     <div class="whatsapp-widget">
         <div class="whatsapp-tooltip">¡Consulta por WhatsApp!</div>
-        <a href="https://wa.me/5491157815136?text=Hola%20KadmonTech,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20IA" 
+        <a href="https://wa.me/5491126143766?text=Hola%20KadmonTech,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20IA" 
            target="_blank" 
            class="whatsapp-button" 
            aria-label="Consultar por WhatsApp">
@@ -1344,7 +1357,7 @@
                 <p class="hero-subtitle">Creamos empleados digitales, sitios web, automatizaciones y sistemas a medida que ayudan a tu empresa a atender mejor, ahorrar tiempo y crecer.</p>
 
                 <div class="hero-buttons">
-                    <a href="https://wa.me/5491157815136?text=Hola%20KadmonTech,%20quiero%20agendar%20mi%20demo%20gratuita%20de%2025%20minutos"
+                    <a href="https://wa.me/5491126143766?text=Hola%20KadmonTech,%20quiero%20agendar%20mi%20demo%20gratuita%20de%2025%20minutos"
                        target="_blank" rel="noopener noreferrer"
                        class="btn hero-btn-primary">
                         <i class="fab fa-whatsapp" aria-hidden="true"></i> Agendar Demo Gratuita
@@ -1618,7 +1631,7 @@
             <h2 id="contact-title">¿Listo para llevar tu negocio al siguiente nivel?</h2>
             <p class="contact-copy">Agendá una asesoría gratuita de 25 minutos y descubrí cómo aplicar la IA en tu empresa.</p>
             <a class="contact-cta"
-               href="https://wa.me/5491157815136?text=Hola%20KadmonTech%2C%20quiero%20agendar%20una%20asesor%C3%ADa%20gratuita%20de%2025%20minutos."
+               href="https://wa.me/5491126143766?text=Hola%20KadmonTech%2C%20quiero%20agendar%20una%20asesor%C3%ADa%20gratuita%20de%2025%20minutos."
                target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp" aria-hidden="true"></i>
                 <span>Agendar Demo Gratuita por WhatsApp</span>
@@ -1689,71 +1702,33 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <!-- Footer — versión minimalista -->
+    <footer class="kt-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>KadmonTech</h3>
-                    <p>Soluciones tecnológicas basadas en inteligencia artificial para transformar tu negocio. Consultas y servicios directamente por WhatsApp.</p>
-                    <div class="social-icons">
-                        <a href="https://wa.me/5491157815136" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de KadmonTech">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="https://www.instagram.com/kadmontech/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de KadmonTech">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="mailto:asesoramiento@kadmontech.com" aria-label="Email de KadmonTech">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
+            <div class="kt-footer-top">
+                <div class="kt-footer-identity">
+                    <a href="#inicio" class="kt-footer-brand" aria-label="KadmonTech — volver al inicio">KadmonTech<span>.</span></a>
+                    <p class="kt-footer-tagline">Tecnología para hacer avanzar tu negocio.</p>
                 </div>
-                
-                <div class="footer-column">
-                    <h3>Servicios</h3>
-                    <ul class="footer-links">
-                        <li><a href="#servicios">Chatbots y Asistentes Virtuales</a></li>
-                        <li><a href="#servicios">Desarrollo Web con IA</a></li>
-                        <li><a href="#servicios">Imágenes y Videos IA Generativa</a></li>
-                        <li><a href="#servicios">Publicidad Digital en Meta Ads</a></li>
-                        <li><a href="#servicios">Automatización de Presupuestos</a></li>
-                        <li><a href="#servicios">Panel de Control de Gestión</a></li>
-                        <li><a href="#servicios">Gestión Inteligente de Stock</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Más Servicios</h3>
-                    <ul class="footer-links">
-                        <li><a href="#servicios">Conciliación Bancaria Automatizada</a></li>
-                        <li><a href="#servicios">Organización de Comprobantes</a></li>
-                        <li><a href="#servicios">Consultoría Estratégica en IA</a></li>
-                        <li><a href="#testimonios">Testimonios</a></li>
-                        <li><a href="#demo">Nuestro método</a></li>
-                        <li><a href="#contacto">Contacto por WhatsApp</a></li>
-                        <li><a href="#solicitud">Enviar una solicitud</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Contacto Directo</h3>
-                    <div class="footer-contact">
-                        <p><i class="fab fa-whatsapp"></i> <span>+54 9 11 5781-5136</span></p>
-                        <p><i class="fas fa-envelope"></i> <span>asesoramiento@kadmontech.com</span></p>
-                        <p><i class="fas fa-globe"></i> <span>www.kadmontech.com</span></p>
-                    </div>
-                    <p style="margin-top: 1.5rem; font-size: 0.9rem;">
-                        Horario de atención:<br>
-                        Lunes a Viernes: 9:00 - 18:00
-                    </p>
-                </div>
+                <nav class="kt-footer-actions" aria-label="Contactar a KadmonTech">
+                    <a href="#solicitud" class="kt-footer-primary">
+                        Contanos tu proyecto <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://wa.me/5491126143766?text=Hola%20KadmonTech%2C%20quisiera%20hacer%20una%20consulta."
+                       target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp de KadmonTech">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+                    </a>
+                    <a href="mailto:asesoramiento@kadmontech.com" aria-label="Escribir a KadmonTech por email">
+                        <i class="fas fa-envelope" aria-hidden="true"></i> Email
+                    </a>
+                </nav>
             </div>
-            
-            <div class="footer-bottom">
-                <p>© 2026 KadmonTech. Todos los derechos reservados.</p>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-                    Consultas mediante el formulario web o WhatsApp: +54 9 11 5781-5136
-                </p>
+            <div class="kt-footer-bottom">
+                <p>© 2026 KadmonTech</p>
+                <div class="kt-footer-legal">
+                    <a href="/privacidad.html">Privacidad</a>
+                    <a href="#inicio">Volver arriba ↑</a>
+                </div>
             </div>
         </div>
     </footer>
