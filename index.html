@@ -532,7 +532,7 @@
         }
 
         .kt-services-heading h2 {
-            margin: 0 0 11px;
+            margin: 0;
             color: #f7fbff;
             font-size: clamp(2rem, 3.3vw, 2.75rem);
             font-weight: 800;
@@ -666,7 +666,7 @@
 
         .method-intro h2 {
             max-width: 380px;
-            margin: 0 0 16px;
+            margin: 0;
             color: #ffffff;
             font-size: clamp(1.8rem, 2.45vw, 2.6rem);
             font-weight: 800;
@@ -1367,21 +1367,6 @@
                     </a>
                 </div>
 
-                <a href="#solicitud" class="hero-intake-link">¿Tenés otro proyecto? Contanos qué necesitás <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-                <div class="hero-features" aria-label="Beneficios de KadmonTech">
-                    <div class="hero-feature">
-                        <i class="fas fa-bolt" aria-hidden="true"></i>
-                        <span>Implementación<br>rápida</span>
-                    </div>
-                    <div class="hero-feature">
-                        <i class="fas fa-layer-group" aria-hidden="true"></i>
-                        <span>Soluciones a<br>medida</span>
-                    </div>
-                    <div class="hero-feature">
-                        <i class="fas fa-chart-line" aria-hidden="true"></i>
-                        <span>Resultados<br>medibles</span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -1391,7 +1376,6 @@
         <div class="container">
             <div class="kt-services-heading">
                 <h2 id="kt-services-title">Tecnología con IA para resultados reales</h2>
-                <p class="kt-services-lead">Soluciones concretas para optimizar, automatizar y escalar tu negocio.</p>
             </div>
             <div class="kt-services-grid">
                 <!-- Solución 01: Empleado Digital para WhatsApp -->
@@ -1468,16 +1452,13 @@
                 </article>
             </div>
         </div>
-        <div class="container kt-intake-inline-cta"><a href="#solicitud">¿Necesitás otra solución? Contanos tu proyecto <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
     </section>
 
     <!-- Nuestro Método — diagnóstico, solución y resultados -->
     <section id="demo" class="method-section" aria-labelledby="method-title">
         <div class="container method-layout">
             <div class="method-intro">
-                <p class="method-eyebrow">NUESTRO MÉTODO</p>
                 <h2 id="method-title">De la idea al resultado,<br>en 3 pasos.</h2>
-                <p class="method-description">Un proceso simple, claro y enfocado en generar valor real para tu negocio.</p>
             </div>
             <ol class="method-steps" aria-label="Nuestro proceso de trabajo en tres pasos">
                 <li class="method-step">
@@ -1644,7 +1625,6 @@
     <section class="kt-intake" id="solicitud" aria-labelledby="kt-intake-title">
       <div class="container kt-intake-layout">
         <div class="kt-intake-intro">
-          <span class="kt-intake-eyebrow">HABLEMOS DE TU PROYECTO</span>
           <h2 id="kt-intake-title">Contanos qué <span>necesitás.</span></h2>
           <p>¿Tenés una idea, un proyecto o un problema que querés resolver con tecnología? Contanos un poco y conversemos sobre cómo podemos ayudarte.</p>
           <ol class="kt-intake-steps">
@@ -1661,7 +1641,7 @@
               <div class="kt-intake-fields">
                 <div class="kt-intake-field"><label for="kt-full-name">Nombre y apellido *</label><input id="kt-full-name" name="fullName" type="text" autocomplete="name" maxlength="160" placeholder="Tu nombre completo" required></div>
                 <div class="kt-intake-field"><label for="kt-business">Negocio o proyecto <span class="kt-intake-optional">(opcional)</span></label><input id="kt-business" name="businessName" type="text" maxlength="160" autocomplete="organization" placeholder="Nombre de tu empresa o idea"></div>
-                <div class="kt-intake-field full"><label for="kt-whatsapp">WhatsApp de contacto *</label><input id="kt-whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" maxlength="40" placeholder="+54 9 11 1234 5678" required aria-describedby="kt-whatsapp-help"><small id="kt-whatsapp-help">Incluí el código de país. Ejemplo: +54 9 11 1234 5678.</small></div>
+                <div class="kt-intake-field full"><label for="kt-whatsapp">WhatsApp de contacto *</label><input id="kt-whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" maxlength="40" placeholder="+54 9 11 1234 5678" required></div>
               </div>
               <fieldset>
                 <legend>¿En qué podemos ayudarte? * <span class="kt-intake-optional">(podés elegir varios)</span></legend>
@@ -1686,7 +1666,6 @@
               <label class="kt-intake-consent" for="kt-consent"><input type="checkbox" id="kt-consent" name="consent" required><span>Leí y acepto la <a href="/privacidad.html" target="_blank" rel="noopener noreferrer">política de privacidad</a> y autorizo a KadmonTech a contactarme exclusivamente para atender esta solicitud. <strong>Obligatorio.</strong></span></label>
               <div id="kt-intake-feedback" class="kt-intake-feedback" role="alert" aria-live="assertive"></div>
               <button id="kt-intake-submit" type="submit" class="kt-intake-submit"><span>Enviar mi solicitud</span><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
-              <small class="kt-intake-form-note">Tus datos se utilizan para responder tu consulta. No te suscribimos a campañas.</small>
             </form>
           </div>
           <div id="kt-intake-success" class="kt-intake-success" role="status" aria-live="polite" tabindex="-1">
@@ -1707,7 +1686,7 @@
         <div class="container">
             <div class="kt-footer-top">
                 <div class="kt-footer-identity">
-                    <a href="#inicio" class="kt-footer-brand" aria-label="KadmonTech — volver al inicio">KadmonTech<span>.</span></a>
+                    <a href="#inicio" class="kt-footer-brand" aria-label="KadmonTech — volver al inicio">KadmonTech</a>
                     <p class="kt-footer-tagline">Tecnología para hacer avanzar tu negocio.</p>
                 </div>
                 <nav class="kt-footer-actions" aria-label="Contactar a KadmonTech">
